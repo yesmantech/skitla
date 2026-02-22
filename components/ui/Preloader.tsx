@@ -1,36 +1,32 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function Preloader() {
     const [isLoading, setIsLoading] = useState(true);
-    const [progress, setProgress] = useState(0);
+    const progressValue = useMotionValue(0);
+    const progressWidth = useTransform(progressValue, (v) => `${Math.round(v)}%`);
+    const progressText = useTransform(progressValue, (v) => `${Math.round(v)}%`);
 
     useEffect(() => {
-        // Simulate organic progress
-        const interval = setInterval(() => {
-            setProgress((prev) => {
-                if (prev >= 100) {
-                    clearInterval(interval);
-                    return 100;
-                }
-                // Accelerate towards end
-                const increment = prev < 60 ? 2 : prev < 85 ? 1.5 : 3;
-                return Math.min(prev + increment, 100);
-            });
-        }, 30);
+        // Animate the progress value organically outside the React render cycle
+        const animation = animate(progressValue, 100, {
+            duration: 2.2,
+            ease: [0.16, 1, 0.3, 1], // Custom realistic ease-out
+        });
 
+        // Hide preloader shortly after animation completes
         const timer = setTimeout(() => {
             setIsLoading(false);
             window.scrollTo(0, 0);
         }, 2400);
 
         return () => {
+            animation.stop();
             clearTimeout(timer);
-            clearInterval(interval);
         };
-    }, []);
+    }, [progressValue]);
 
     return (
         <AnimatePresence mode="wait">
@@ -102,7 +98,7 @@ export default function Preloader() {
                                 style={{
                                     background: "linear-gradient(90deg, #8A6E2F, #D9B162, #FCF6BA)",
                                     boxShadow: "0 0 12px rgba(217,177,98,0.4)",
-                                    width: `${progress}%`,
+                                    width: progressWidth,
                                 }}
                                 transition={{ duration: 0.05 }}
                             />
@@ -115,7 +111,7 @@ export default function Preloader() {
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.8 }}
                         >
-                            {Math.round(progress)}%
+                            {progressText}
                         </motion.span>
                     </motion.div>
 

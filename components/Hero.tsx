@@ -1,5 +1,7 @@
 "use client";
 
+import { useState, useEffect } from "react";
+
 import { Container } from "./ui/Container";
 import { CopyVariant } from "@/content/copy";
 import { HeroCTA } from "./ui/HeroCTA";
@@ -11,6 +13,15 @@ import { TextReveal } from "./ui/TextReveal";
 const SkitlaLogo = dynamic(() => import("./ui/SkitlaLogo"), { ssr: false });
 
 export function Hero({ content }: { content: CopyVariant["hero"] }) {
+    const [show3D, setShow3D] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShow3D(true);
+        }, 2500);
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <section id="home" className="relative min-h-svh w-full flex flex-col items-center justify-center bg-black overflow-hidden">
             <Starfield />
@@ -58,7 +69,7 @@ export function Hero({ content }: { content: CopyVariant["hero"] }) {
                             onContextMenu={(e) => e.preventDefault()}
                             className="w-[320px] h-[320px] sm:w-[450px] sm:h-[450px] md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px] pointer-events-auto select-none"
                         >
-                            <SkitlaLogo />
+                            {show3D && <SkitlaLogo />}
                         </div>
                     </div>
                 </div>
