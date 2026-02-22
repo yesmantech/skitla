@@ -1,26 +1,383 @@
 @import "tailwindcss";
 
+@theme {
+  /* Colors - Hyper-Fidelity Arcadia Extraction */
+  --color-brand-primary: #D9B162;
+  --color-arcadia-gold: #D9B162;
+  --color-brand-background: #000000;
+  --color-brand-surface: #0A0A0A;
+
+  /* Muted Gold Gradient */
+  --color-gold-start: #D9B162;
+  --color-gold-end: #A68446;
+
+  --color-text-primary: #FFFFFF;
+  --color-text-muted: #999999;
+
+  /* Radius - Professional */
+  --radius-pill: 9999px;
+  --radius-card: 20px;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #000000;
+  --foreground: #FFFFFF;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  font-weight: 300;
+  /* Light weight for elegance */
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: -0.04em;
+  font-weight: 400;
+  /* Medium weight */
+}
+
+/* --- Arcadia Hyper-Fidelity Utilities --- */
+
+.text-liquid-gold {
+  background: linear-gradient(180deg,
+      #FCF6BA 0%,
+      #D9B162 40%,
+      #BF953F 60%,
+      #8A6E2F 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 15px rgba(217, 177, 98, 0.3));
+}
+
+.text-liquid-silver {
+  background: linear-gradient(180deg,
+      #FFFFFF 0%,
+      #E2E2E2 40%,
+      #B8B8B8 60%,
+      #808080 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.15));
+}
+
+.glass-obsidian {
+  background: rgba(5, 5, 5, 0.4);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(217, 177, 98, 0.1);
+  box-shadow:
+    0 10px 40px -10px rgba(0, 0, 0, 0.5),
+    inset 0 0 20px rgba(217, 177, 98, 0.02);
+}
+
+.icon-gold {
+  color: #D9B162;
+  filter: drop-shadow(0 0 8px rgba(217, 177, 98, 0.3));
+}
+
+.btn-arcadia {
+  position: relative;
+  background: #D9B162;
+  color: #000000;
+  border-radius: 9999px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 10px;
+  padding: 14px 32px;
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn-arcadia:hover {
+  transform: translateY(-2px);
+  background: #FFFFFF;
+  box-shadow: 0 15px 30px rgba(217, 177, 98, 0.2);
+}
+
+.card-arcadia {
+  background: rgba(10, 10, 10, 0.2);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.card-arcadia:hover {
+  border-color: rgba(217, 177, 98, 0.2);
+  background: rgba(15, 15, 15, 0.3);
+}
+
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.02;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: overlay;
+  /* Using a static pattern to avoid live per-pixel calculations */
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAAD/6666AAAAElBMVEUAAAD8/Pz09PT4+Pj////////8/Pz09PT4+Pj////////8/Pz09PT4+Pj////////8/Pz09PT4+Pj////////8/Pz09PT4+Pj////////8/Pz09PT4+Pj//////////8AAAA7");
+}
+
+.hover-line-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-line-reveal::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: translateX(-101%);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.hover-line-reveal:hover::after {
+  transform: translateX(0);
+}
+
+.section-padding {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-top: 128px;
+    padding-bottom: 128px;
+  }
+}
+
+/* --- Hardware-Accelerated Scrolling Animations --- */
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes scroll-down {
+  0% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-scroll-up {
+  animation: scroll-up var(--speed, 40s) linear infinite;
+}
+
+.animate-scroll-down {
+  animation: scroll-down var(--speed, 40s) linear infinite;
+}
+
+/* --- TIER S: Hero CTA Button --- */
+
+@keyframes border-rotate {
+  0% {
+    --border-angle: 0deg;
+  }
+
+  100% {
+    --border-angle: 360deg;
+  }
+}
+
+@keyframes shimmer-sweep {
+  0% {
+    transform: translateX(-100%) skewX(-20deg);
+  }
+
+  100% {
+    transform: translateX(300%) skewX(-20deg);
+  }
+}
+
+@keyframes breathe-glow {
+
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scale(1.08);
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.hero-cta-tier-s {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  /* border thickness */
+  border-radius: 9999px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  isolation: isolate;
+}
+
+/* Animated rotating conic-gradient border */
+.hero-cta-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: conic-gradient(from var(--border-angle, 0deg),
+      transparent 0%,
+      #D9B162 20%,
+      #FCF6BA 30%,
+      #D9B162 40%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.08) 60%,
+      transparent 70%,
+      #D9B162 80%,
+      #FCF6BA 90%,
+      #D9B162 100%);
+  animation: border-rotate 4s linear infinite;
+  z-index: 0;
+  opacity: 0.6;
+  transition: opacity 0.5s ease;
+}
+
+.hero-cta-tier-s:hover .hero-cta-border {
+  opacity: 1;
+}
+
+/* Inner glass surface */
+.hero-cta-surface {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 40px;
+  border-radius: 9999px;
+  background: rgba(5, 5, 5, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 1;
+  overflow: hidden;
+  transition: background 0.5s ease;
+}
+
+.hero-cta-tier-s:hover .hero-cta-surface {
+  background: rgba(10, 10, 10, 0.95);
+}
+
+/* Shimmer sweep effect */
+.hero-cta-shimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(217, 177, 98, 0.12) 40%,
+      rgba(252, 246, 186, 0.2) 50%,
+      rgba(217, 177, 98, 0.12) 60%,
+      transparent 100%);
+  animation: shimmer-sweep 5s ease-in-out infinite;
+  animation-delay: 2s;
+  pointer-events: none;
+}
+
+/* Text styling */
+.hero-cta-text {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-cta-tier-s:hover .hero-cta-text {
+  background: linear-gradient(180deg, #FCF6BA 0%, #D9B162 50%, #BF953F 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Arrow micro-animation */
+.hero-cta-arrow {
+  display: inline-flex;
+  color: rgba(255, 255, 255, 0.4);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  position: relative;
+  z-index: 2;
+}
+
+.hero-cta-tier-s:hover .hero-cta-arrow {
+  color: #D9B162;
+  transform: translateX(4px);
+}
+
+/* Breathing glow underneath */
+.hero-cta-glow {
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  background: radial-gradient(ellipse at center, rgba(217, 177, 98, 0.15), transparent 70%);
+  animation: breathe-glow 3s ease-in-out infinite;
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(15px);
+}
+
+/* --- TIER S: Optimized Component Animations --- */
+@keyframes shimmer-glint {
+  0% {
+    transform: translateX(-250%) rotate(45deg);
+    opacity: 0;
+  }
+
+  45%,
+  55% {
+    opacity: 0.15;
+  }
+
+  100% {
+    transform: translateX(250%) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.shimmer-effect {
+  animation: shimmer-glint 12s infinite ease-in-out;
 }
