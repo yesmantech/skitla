@@ -85,7 +85,7 @@ export function BioAuthority() {
                                         fill
                                         className="object-cover object-center opacity-80 group-hover:opacity-100 transition-all duration-1000 group-hover:scale-[1.05]"
                                         sizes="(max-width: 768px) 100vw, 672px"
-                                        priority
+                                        loading="lazy"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-60" />
                                 </div>

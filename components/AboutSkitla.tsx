@@ -70,7 +70,7 @@ export function AboutSkitla() {
                                         fill
                                         className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
                                         sizes="(max-width: 768px) 100vw, 420px"
-                                        priority
+                                        loading="lazy"
                                     />
                                     {/* Bottom Gradient */}
                                     <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-[1]" />

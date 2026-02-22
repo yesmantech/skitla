@@ -24,7 +24,7 @@ export function Starfield() {
 
         const stars: { x: number; y: number; size: number; speed: number; opacity: number }[] = [];
         const isMobile = window.innerWidth < 768;
-        const starCount = isMobile ? 40 : 80; // Adaptive density for mobile vs desktop
+        const starCount = isMobile ? 15 : 80; // Adaptive density for mobile vs desktop
 
         for (let i = 0; i < starCount; i++) {
             stars.push({
