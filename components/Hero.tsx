@@ -31,10 +31,7 @@ export function Hero({ content }: { content: CopyVariant["hero"] }) {
                 <div className="flex flex-col items-center lg:items-start z-20 w-full lg:w-[55%] mb-10 lg:mb-0 lg:pr-10">
                     <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[7rem] xl:text-[8rem] font-medium leading-[1.05] md:leading-[1.05] tracking-tight mb-6 md:mb-8 w-full max-w-full break-words pb-4">
                         <span className="block text-liquid-silver">
-                            <TextReveal className="inline-block">Domina</TextReveal>
-                        </span>
-                        <span className="block text-liquid-silver">
-                            <TextReveal className="inline-block">il mercato</TextReveal>
+                            <TextReveal className="inline-block">Domina il mercato</TextReveal>
                         </span>
                         <span className="block mt-0 md:mt-2 text-liquid-silver">
                             <span className="inline-block mr-4">con</span>

@@ -162,8 +162,9 @@ export function BioAuthority() {
                                     </h3>
                                     <ul className="space-y-4">
                                         {[
+                                            "Official Partner BingX e Bitget.",
                                             "Analisi Contrarian (BTC ATH $124.5k call).",
-                                            "Caso Studio Documentato ($5k to >$300k).",
+                                            "Caso Studio Documentato ($5k to >$300k) — pubblicato dal quotidiano Lo Jonio.",
                                             "Tracciabilità (Ecosistema + pubblicazioni)."
                                         ].map((item, i) => (
                                             <li key={i} className="flex items-start gap-3">

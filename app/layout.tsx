@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
       <body className="antialiased bg-black text-white lg:cursor-none selection:bg-brand-primary selection:text-black">
         <CustomCursor />
         <NoiseOverlay />
