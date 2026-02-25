@@ -66,7 +66,7 @@ export function ProofStrip({ content }: { content: CopyVariant["proof"] }) {
 
                                     <div className="flex flex-col h-full items-center justify-center relative z-10 text-center">
                                         {/* LARGE METRIC VALUE: Balanced for presence */}
-                                        <div className={`font-bold text-white mb-2 md:mb-8 tracking-tighter group-hover:text-liquid-gold transition-colors duration-500 whitespace-nowrap drop-shadow-[0_0_30px_rgba(217,177,98,0.2)] ${i === 0 ? "text-5xl sm:text-6xl md:text-8xl mb-4" : "text-3xl sm:text-4xl md:text-8xl"
+                                        <div className={`font-bold text-liquid-gold mb-2 md:mb-8 tracking-tighter whitespace-nowrap drop-shadow-[0_0_30px_rgba(217,177,98,0.2)] ${i === 0 ? "text-5xl sm:text-6xl md:text-8xl mb-4" : "text-3xl sm:text-4xl md:text-8xl"
                                             }`}>
                                             {stat.value}
                                         </div>

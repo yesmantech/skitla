@@ -29,16 +29,24 @@ export function Hero({ content }: { content: CopyVariant["hero"] }) {
             <div className="relative z-10 w-full max-w-[1400px] px-6 flex flex-col lg:flex-row items-center justify-between text-center lg:text-left pt-24 lg:pt-32 pb-12 md:pb-32 lg:h-svh">
                 {/* TYPOGRAPHY - Left on Desktop */}
                 <div className="flex flex-col items-center lg:items-start z-20 w-full lg:w-[55%] mb-10 lg:mb-0 lg:pr-10">
-                    <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[7rem] xl:text-[8rem] font-medium leading-[1.05] md:leading-[1.05] tracking-tight mb-6 md:mb-8 w-full max-w-full break-words pb-4">
-                        <span className="block text-liquid-silver">
-                            <TextReveal className="inline-block">Domina il mercato</TextReveal>
-                        </span>
-                        <span className="block mt-0 md:mt-2 text-liquid-silver">
-                            <span className="inline-block mr-4">con</span>
-                            <span className="text-liquid-gold italic font-serif inline-block pr-6 lg:pr-10">
-                                <TextReveal className="inline-block">Skitla</TextReveal>
-                            </span>
-                        </span>
+                    <h1 className="text-[2.6rem] sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem] font-medium leading-[1.05] md:leading-[1.05] tracking-tight mb-6 md:mb-8 w-full max-w-full pb-4">
+                        <motion.span
+                            className="block text-liquid-silver"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                        >
+                            Domina il mercato
+                        </motion.span>
+                        <motion.span
+                            className="block mt-0 md:mt-2"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                        >
+                            <span className="text-liquid-silver inline-block mr-3 md:mr-4">con</span>
+                            <span className="text-liquid-gold italic font-serif inline-block">Skitla</span>
+                        </motion.span>
                     </h1>
 
                     <p className="text-base sm:text-lg md:text-xl text-white/40 max-w-lg leading-relaxed font-light px-4 lg:px-0 mb-8 lg:mb-10">

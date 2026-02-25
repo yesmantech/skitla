@@ -96,8 +96,8 @@ export function CopyTradingGraphic({ isMobile = false }: { isMobile?: boolean })
                             transition={{
                                 duration: 2.5,
                                 repeat: Infinity,
-                                repeatDelay: Math.random() * 2,
-                                delay: i * 0.3,
+                                repeatDelay: 1,
+                                delay: 0.5,
                                 ease: "linear",
                             }}
                         />
@@ -150,8 +150,8 @@ export function CopyTradingGraphic({ isMobile = false }: { isMobile?: boolean })
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6, type: "spring" }}
                         className={`flex items-center justify-center border border-arcadia-gold/40 bg-gradient-to-br from-black/80 to-black/40 backdrop-blur-xl overflow-hidden group ${isMobile
-                                ? 'w-[44px] h-[44px] rounded-xl shadow-[0_0_25px_rgba(217,177,98,0.2)]'
-                                : 'w-[64px] h-[64px] lg:w-[76px] lg:h-[76px] rounded-2xl lg:rounded-[24px] shadow-[0_0_40px_rgba(217,177,98,0.25)]'
+                            ? 'w-[44px] h-[44px] rounded-xl shadow-[0_0_25px_rgba(217,177,98,0.2)]'
+                            : 'w-[64px] h-[64px] lg:w-[76px] lg:h-[76px] rounded-2xl lg:rounded-[24px] shadow-[0_0_40px_rgba(217,177,98,0.25)]'
                             }`}
                     >
                         <div className={`absolute inset-0 border border-white/10 pointer-events-none ${isMobile ? 'rounded-xl' : 'rounded-2xl lg:rounded-[24px]'}`} />
@@ -201,8 +201,8 @@ export function CopyTradingGraphic({ isMobile = false }: { isMobile?: boolean })
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.5, delay: 0.6 + (i * 0.1) }}
                                 className={`flex items-center justify-center bg-black/60 backdrop-blur-md border border-white/[0.08] rounded-full z-20 ${isMobile
-                                        ? 'gap-1.5 px-2.5 py-1 min-w-[48px] shadow-[0_2px_12px_rgba(0,0,0,1)]'
-                                        : 'gap-2.5 px-4 py-2 min-w-[70px] lg:min-w-[80px] shadow-[0_4px_20px_rgba(0,0,0,1)]'
+                                    ? 'gap-1.5 px-2.5 py-1 min-w-[48px] shadow-[0_2px_12px_rgba(0,0,0,1)]'
+                                    : 'gap-2.5 px-4 py-2 min-w-[70px] lg:min-w-[80px] shadow-[0_4px_20px_rgba(0,0,0,1)]'
                                     }`}
                             >
                                 <User className={isMobile ? "w-2.5 h-2.5 text-arcadia-gold/80" : "w-3.5 h-3.5 lg:w-4 lg:h-4 text-arcadia-gold/80"} />
