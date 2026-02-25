@@ -45,7 +45,7 @@ export function Hero({ content }: { content: CopyVariant["hero"] }) {
                             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                         >
                             <span className="text-liquid-silver inline-block mr-3 md:mr-4">con</span>
-                            <span className="text-liquid-gold italic font-serif inline-block">Skitla</span>
+                            <span className="text-liquid-gold italic font-serif inline-block pr-[0.2em]">Skitla</span>
                         </motion.span>
                     </h1>
 
