@@ -55,7 +55,7 @@ const cards: PricingCard[] = [
         eyebrow: "MEMBERSHIP",
         title: "Premium Mensile",
         price: "€247",
-        priceSuffix: "/ anno",
+  priceSuffix: "/ mese",
         description:
             "Formazione, supporto e community per chi vuole un metodo serio e costante.",
         benefits: [
