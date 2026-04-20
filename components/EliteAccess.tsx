@@ -53,8 +53,8 @@ const cards: PricingCard[] = [
     },
     {
         eyebrow: "MEMBERSHIP",
-        title: "Premium Annual",
-        price: "€1.497",
+        title: "Premium Mensile",
+        price: "€247",
         priceSuffix: "/ anno",
         description:
             "Formazione, supporto e community per chi vuole un metodo serio e costante.",
@@ -80,7 +80,7 @@ const cards: PricingCard[] = [
         description:
             "Tutto il Premium, per sempre. Ideale se vuoi bloccare l'accesso nel tempo.",
         benefits: [
-            "Tutto il Premium Annual",
+            "Tutto il Premium Mensile",
             "Accesso lifetime a formazione e aggiornamenti",
             "Priorità nel supporto",
             "Nuovi contenuti futuri inclusi",
