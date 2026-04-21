@@ -57,15 +57,13 @@ const cards: PricingCard[] = [
         price: "€247",
         priceSuffix: "/ mese",
         description:
-            "Formazione, supporto e community per chi vuole un metodo serio e costante.",
+            "Non è un corso. Non è formazione base. Il valore è semplice: vedere cosa faccio e avere accesso diretto alla mia operatività.",
         benefits: [
-            "Formazione completa (da 0 a 100)",
-            "Supporto VIP 7/7 in chatroom riservata",
-            "Segnali e update operativi",
-            "Analisi strategiche BTC & Altcoin",
-            "Supporto tecnico (exchange, wallet, strumenti)",
-            "Community d'élite (chat + vocal room)",
-            "Accesso a sala segnali VIP",
+            "Accesso ai miei segnali (crypto, indici, commodities)",
+            "Setup chiari con ingressi, target e gestione rischio",
+            "Aggiornamenti in tempo reale durante le fasi di mercato",
+            "Sessioni live e vocal room della mia operatività",
+            "Insight esclusivi sui movimenti e opportunità",
         ],
         cta: "Unisciti al Premium",
         microcopy: "Accesso immediato a contenuti e community.",
@@ -402,10 +400,18 @@ export function EliteAccess() {
 
                 {/* SECTION 2: MEMBERSHIPS */}
                 <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-10">
-                        <h3 className="text-2xl md:text-4xl font-serif text-liquid-silver tracking-tight">
+                    <div className="text-center mb-12">
+                        <h3 className="text-2xl md:text-4xl font-serif text-liquid-silver tracking-tight mb-6">
                             Membership <span className="text-liquid-gold italic">Private</span>
                         </h3>
+                        <div className="max-w-2xl mx-auto space-y-4 text-white/50 text-[14px] md:text-[15px] leading-relaxed font-light tracking-[0.02em]">
+                            <p>
+                                <span className="text-white/80 font-normal">Se sei qui, sai già il livello delle analisi e delle previsioni che porto ogni giorno sul mercato.</span> Dalla previsione del top di Bitcoin in area 124.500, fino all'individuazione del bottom in area 60.350, il valore è sempre stato uno: <strong className="text-liquid-gold font-normal italic">anticipare il mercato, non inseguirlo.</strong>
+                            </p>
+                            <p>
+                                <span className="text-white/80 font-normal">ELITE nasce per questo.</span> È l'accesso diretto alla mia operatività. Un ambiente riservato a chi vuole stare dentro al flusso reale del mercato, con riferimenti chiari, senza distrazioni e senza contenuti inutili.
+                            </p>
+                        </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
@@ -427,3 +433,4 @@ export function EliteAccess() {
         </section>
     );
 }
+
