@@ -141,7 +141,7 @@ export function EliteAccess() {
                     </span>
 
                     {/* Title */}
-                    <h3 className="text-xl md:text-2xl font-serif text-liquid-silver tracking-tight mb-4 md:mb-6 group-hover:text-white transition-colors duration-500">
+                    <h3 className="text-xl md:text-2xl font-serif text-liquid-silver tracking-tight pb-1 mb-3 md:mb-5 group-hover:text-white transition-colors duration-500">
                         {card.title}
                     </h3>
 
@@ -319,7 +319,7 @@ export function EliteAccess() {
                                     <span className="block text-[9px] font-bold uppercase tracking-[0.4em] text-arcadia-gold/40 mb-3 font-mono">
                                         {copyTradingCard.eyebrow}
                                     </span>
-                                    <h3 className="text-xl font-serif text-liquid-silver tracking-tight mb-3 group-hover:text-white transition-colors duration-500">
+                                    <h3 className="text-xl font-serif text-liquid-silver tracking-tight pb-1 mb-2 group-hover:text-white transition-colors duration-500">
                                         {copyTradingCard.title}
                                     </h3>
                                     <div className="flex items-baseline gap-2 mb-2">
@@ -433,4 +433,3 @@ export function EliteAccess() {
         </section>
     );
 }
-
