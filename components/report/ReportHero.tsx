@@ -79,7 +79,7 @@ function KPICard({
         WebkitBackdropFilter: "blur(25px)",
         border: "1px solid rgba(255, 255, 255, 0.06)",
         borderRadius: 20,
-        padding: "28px 24px",
+        padding: "20px 16px",
         position: "relative",
         overflow: "hidden",
         cursor: "default",
@@ -107,23 +107,23 @@ function KPICard({
         {/* Icon */}
         <div
           style={{
-            width: 44,
-            height: 44,
-            borderRadius: 12,
+            width: 36,
+            height: 36,
+            borderRadius: 10,
             background: `${accentColor}15`,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            marginBottom: 20,
+            marginBottom: 14,
           }}
         >
-          <Icon size={22} strokeWidth={1.5} />
+          <Icon size={18} strokeWidth={1.5} />
         </div>
 
         {/* Value */}
         <div
           style={{
-            fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
+            fontSize: "clamp(1.5rem, 4vw, 2.8rem)",
             fontWeight: 200,
             letterSpacing: "-0.04em",
             lineHeight: 1,
@@ -140,7 +140,7 @@ function KPICard({
         {/* Label */}
         <div
           style={{
-            fontSize: 13,
+            fontSize: 11,
             fontWeight: 600,
             letterSpacing: "0.08em",
             textTransform: "uppercase" as const,
@@ -152,7 +152,7 @@ function KPICard({
         </div>
         <div
           style={{
-            fontSize: 12,
+            fontSize: 10,
             color: "rgba(255, 255, 255, 0.3)",
           }}
         >
@@ -285,9 +285,10 @@ export function ReportHero() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
-            gap: 16,
+            gap: 12,
             maxWidth: 900,
             margin: "0 auto",
+            padding: "0 4px",
           }}
         >
           {kpiCards.map((card, i) => (
