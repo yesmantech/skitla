@@ -67,7 +67,7 @@ function BentoCard({ icon: Icon, value, label, sublabel, sparkline, accentColor,
         WebkitBackdropFilter: "blur(25px)",
         border: "1px solid rgba(255, 255, 255, 0.06)",
         borderRadius: 20,
-        padding: "20px 20px",
+        padding: "16px 14px",
         position: "relative",
         overflow: "hidden",
         cursor: "default",
@@ -115,7 +115,7 @@ function BentoCard({ icon: Icon, value, label, sublabel, sparkline, accentColor,
       <div style={{ position: "relative", zIndex: 1, marginTop: 12 }}>
         <div
           style={{
-            fontSize: large ? "clamp(1.8rem, 3.5vw, 2.4rem)" : "clamp(1.4rem, 2.5vw, 1.85rem)",
+            fontSize: large ? "clamp(1.4rem, 3.5vw, 2.4rem)" : "clamp(1.2rem, 2.5vw, 1.85rem)",
             fontWeight: 300,
             letterSpacing: "-0.03em",
             lineHeight: 1.1,
@@ -252,14 +252,20 @@ export function StatsBento() {
           </p>
         </motion.div>
 
-        {/* Bento Grid — asymmetric 2-col layout */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: 14,
-          }}
-        >
+        <style>{`
+          .stats-bento-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+          }
+          @media (min-width: 640px) {
+            .stats-bento-grid {
+              grid-template-columns: repeat(3, 1fr);
+              gap: 14px;
+            }
+          }
+        `}</style>
+        <div className="stats-bento-grid">
           {cards.map((card, i) => (
             <BentoCard
               key={card.label}
