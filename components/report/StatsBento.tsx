@@ -1,3 +1,26 @@
+/**
+ * @file StatsBento.tsx — Bento grid of advanced KPI stat cards for the report.
+ *
+ * Renders a 2×3 (mobile) or 3×2 (desktop) responsive grid of stat cards
+ * showing advanced trading metrics:
+ *   1. Win Rate (green) — with 5-day rolling sparkline
+ *   2. Avg R:R (gold) — average risk/reward ratio across all trades
+ *   3. Max Drawdown (red) — worst peak-to-trough decline
+ *   4. Best Streak (orange) — longest consecutive profitable days
+ *   5. Avg Daily PnL (blue) — with 3-day rolling sparkline
+ *   6. Active Since (purple) — portfolio inception date + years active
+ *
+ * ## Sub-components:
+ *   - BentoCard — Individual glassmorphism stat card with icon, hover lift, and accent line
+ *   - MicroSparkline — Tiny SVG sparkline chart with gradient fill
+ *
+ * ## Data Source:
+ *   Imports `ADVANCED_STATS` from `content/report-data.ts`.
+ *   Each stat includes a value, label, optional sublabel and sparkline data.
+ *
+ * @module report/StatsBento
+ */
+
 "use client";
 
 import React from "react";

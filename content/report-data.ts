@@ -1,11 +1,30 @@
-// ═══════════════════════════════════════════════════════════════
-// Skitla13 — Report Page Data
-// Reads from trades.json and computes all stats automatically.
-//
-// DATA SOURCE: content/trades.json
-// - dailyReports[]: the ACTUAL daily P&L (used for equity curve + heatmap)
-// - trades[]:       individual signals with multi-TP levels (used for trade log)
-// ═══════════════════════════════════════════════════════════════
+/**
+ * @file report-data.ts — Data processing pipeline for the Skitla13 trading report page.
+ *
+ * Reads raw trading data from `content/trades.json` and computes all statistics,
+ * charts, and KPIs used by the report page components.
+ *
+ * ## Data Source: trades.json
+ *   - `dailyReports[]` — Actual daily P&L records (equity curve, heatmap, win rate)
+ *   - `trades[]` — Individual trade signals with multi-TP levels (trade log)
+ *   - `meta.startDate` — Portfolio start date (for "active since" calculations)
+ *
+ * ## Computed Exports:
+ *   - `DAILY_REPORTS_RAW` — Parsed and sorted daily reports
+ *   - `RECENT_TRADES` — Parsed trades (most recent first)
+ *   - `DAILY_RETURNS` — Daily P&L % for the heatmap component
+ *   - `EQUITY_DATA` — Cumulative equity curve (additive, not compound)
+ *   - `KPI_STATS` — Win rate, total profit %, trade counts, day counts
+ *   - `ADVANCED_STATS` — Detailed stats with rolling sparklines
+ *   - `MONTH_LABELS` — Italian month abbreviations for chart axes
+ *
+ * ## Note on Equity Calculation:
+ *   Uses additive (not compounding) growth: each day's % is relative to
+ *   the FIXED reference capital, not the running total. This makes the
+ *   equity curve reflect actual dollar returns rather than geometric growth.
+ *
+ * @module content/report-data
+ */
 
 import rawData from "./trades.json";
 

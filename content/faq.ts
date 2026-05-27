@@ -1,3 +1,15 @@
+/**
+ * @file faq.ts — FAQ content data for the Skitla13 landing page.
+ *
+ * Array of question/answer pairs displayed in the FAQ accordion section.
+ * Content is in Italian, targeting prospective community members.
+ *
+ * Note: Placeholders like [REFERRAL_LINK] and [GUARANTEE_WINDOW] should be
+ * replaced with actual values when the FAQ component renders them.
+ *
+ * @module content/faq
+ */
+
 export const FAQS = [
     {
         question: "È adatto ai principianti?",

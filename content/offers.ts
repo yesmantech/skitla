@@ -1,3 +1,15 @@
+/**
+ * @file offers.ts — Value proposition cards for the Skitla13 landing page.
+ *
+ * Array of feature cards with Lucide icons, displayed in the "What You Get"
+ * section. Each card has a title, description, and icon component.
+ *
+ * Note: Placeholder [CHANNELS] in the Community card should be replaced
+ * with actual channel names (Discord/Telegram) at render time.
+ *
+ * @module content/offers
+ */
+
 import { Zap, BookOpen, MessageCircle, BarChart3, ShieldCheck } from "lucide-react";
 
 export const OFFERS = [

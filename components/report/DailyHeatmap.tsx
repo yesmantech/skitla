@@ -1,3 +1,31 @@
+/**
+ * @file DailyHeatmap.tsx — GitHub-style calendar heatmap for daily trading P&L.
+ *
+ * Renders a monthly calendar grid where each cell is color-coded by daily P&L:
+ *   - Green shades: profitable days (intensity scales with gain %)
+ *   - Red shades: losing days (intensity scales with loss %)
+ *   - Transparent: weekends or no-data days
+ *
+ * Features:
+ *   - Month navigation with chevron buttons (prev/next)
+ *   - Auto-selects the month with the most data on initial render
+ *   - Monthly summary stats strip (trading days, wins, losses, best day)
+ *   - Loss-to-Win color legend bar
+ *   - Per-cell hover animation (scale + glow) via Framer Motion
+ *   - Staggered cell entrance animations triggered by Intersection Observer
+ *   - Today indicator (gold dot)
+ *
+ * ## Data Source:
+ *   Imports `DAILY_RETURNS` from `content/report-data.ts`.
+ *   Each entry is { date: string, pnl: number }.
+ *
+ * ## Calendar Grid Algorithm:
+ *   Builds a 7-column CSS grid (Mon–Sun) with empty prefix cells to align
+ *   the first day of the month to its correct weekday column.
+ *
+ * @module report/DailyHeatmap
+ */
+
 "use client";
 
 import React, { useMemo, useState } from "react";

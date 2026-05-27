@@ -1,3 +1,29 @@
+/**
+ * @file ReportHero.tsx — Hero section for the Skitla13 trading performance report.
+ *
+ * Displays the three headline KPI cards with animated counters:
+ *   1. Win Rate (green) — percentage of profitable trading days
+ *   2. Total Profit (gold) — cumulative P&L percentage
+ *   3. Signals (purple) — total number of trade signals sent
+ *
+ * Features:
+ *   - "Track Record Verificato" badge with pulsing green dot
+ *   - Animated count-up numbers (via useCountUp hook, 2.2s ease-out)
+ *   - Gradient overlay background per card
+ *   - Hover lift effect with colored box shadow
+ *   - Animated accent line at the bottom of each card
+ *   - Subtle gold ambient glow in the background
+ *   - Responsive headline using clamp() typography
+ *
+ * ## Data Source:
+ *   Imports `KPI_STATS` from `content/report-data.ts`.
+ *
+ * ## Sub-components:
+ *   - KPICard — Individual stat card with icon, counter, label, and sublabel
+ *
+ * @module report/ReportHero
+ */
+
 "use client";
 
 import React from "react";

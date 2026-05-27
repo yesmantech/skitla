@@ -1,3 +1,25 @@
+/**
+ * @file copy.ts — A/B test copy variants for the Skitla13 landing page.
+ *
+ * Defines two complete sets of marketing copy (CONTENT_A and CONTENT_B) that
+ * can be swapped in `app/page.tsx` to test different value propositions.
+ *
+ * ## Variant A ("Domina i Mercati"):
+ *   More direct, action-oriented Italian copy focused on trading education,
+ *   copy trading, and the Elite Trading Community brand.
+ *
+ * ## Variant B ("Arcadia"):
+ *   Premium, exclusive positioning with references to "institutional-level"
+ *   analysis, a "Platinum" trial, and the "Arcadia" methodology brand.
+ *
+ * ## Structure:
+ *   Both variants implement the `CopyVariant` type which provides content for:
+ *   hero, trial, guarantee, pricing, ecosystem, and proof sections.
+ *   Each section's content maps directly to a landing page component.
+ *
+ * @module content/copy
+ */
+
 export type CopyVariant = {
     hero: {
         badge: string;

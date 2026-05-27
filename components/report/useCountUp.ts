@@ -1,3 +1,18 @@
+/**
+ * @file useCountUp.ts — Animated number counter hook using requestAnimationFrame.
+ *
+ * Smoothly animates a number from 0 to the target value with an
+ * exponential ease-out curve. Used for KPI stat cards on the report page.
+ *
+ * @param target - The final number to count up to
+ * @param duration - Animation duration in milliseconds (default: 2000ms)
+ * @param trigger - Boolean to start the animation (typically from useInView)
+ * @param decimals - Number of decimal places to show (default: 0)
+ * @returns Current animated value as a formatted string
+ *
+ * @module report/useCountUp
+ */
+
 "use client";
 
 import { useEffect, useRef, useState } from "react";

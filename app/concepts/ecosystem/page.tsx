@@ -1,3 +1,18 @@
+/**
+ * @file page.tsx — Design Lab concept exploration page for the ecosystem section.
+ *
+ * An internal "Design Lab" page used to prototype and preview three different
+ * visual concepts for the FeaturesEcosystem section:
+ *   - Concept A: "Holographic Bento" — BentoGrid component
+ *   - Concept B: "Neural Constellation" — NeuralNetwork component
+ *   - Concept C: "Golden Archive" — GoldenArchive component
+ *
+ * All three concepts are currently stubs. This page is for design iteration
+ * and is not linked from the main navigation (accessible via /concepts/ecosystem).
+ *
+ * Uses Tailwind-style utility classes (defined in globals.css).
+ */
+
 "use client";
 
 import React from "react";

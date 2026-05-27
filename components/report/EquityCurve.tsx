@@ -1,3 +1,31 @@
+/**
+ * @file EquityCurve.tsx — Interactive equity curve chart for the trading report.
+ *
+ * Renders a cumulative P&L line chart using the raw Canvas 2D API (no chart library).
+ * The chart features:
+ *   - Animated draw-in effect on first viewport entry (ease-out cubic, 2s)
+ *   - Period filter tabs (1M, 3M, 6M, 1Y, ALL)
+ *   - Leverage multiplier selector (1x–20x) to simulate leveraged returns
+ *   - Interactive tooltip on hover showing date and P&L percentage
+ *   - Vertical crosshair line at the hovered data point
+ *   - Gradient fill under the curve (gold-to-transparent)
+ *   - Glowing endpoint dot with label showing current total growth
+ *   - Responsive: redraws on window resize using devicePixelRatio for crisp rendering
+ *
+ * ## Data Source:
+ *   Imports `EQUITY_DATA` from `content/report-data.ts`.
+ *   Each point is { date, value } where value=100 is the starting baseline.
+ *
+ * ## Canvas Drawing Pipeline:
+ *   1. Grid lines + Y-axis labels (percentage)
+ *   2. X-axis date labels (auto-scaled for viewport width)
+ *   3. Bezier curve through data points (smooth interpolation)
+ *   4. Gradient area fill below the curve
+ *   5. Glow dot + value label at the curve endpoint
+ *
+ * @module report/EquityCurve
+ */
+
 "use client";
 
 import React, { useEffect, useRef, useState, useCallback } from "react";

@@ -1,3 +1,24 @@
+/**
+ * @file DrawdownChart.tsx — Drawdown "underwater" chart for the trading report.
+ *
+ * Visualizes peak-to-trough equity decline over time — a standard hedge fund metric.
+ * Red-filled areas represent drawdown periods where equity was below its all-time high.
+ *
+ * Features:
+ *   - Canvas 2D rendering with devicePixelRatio support
+ *   - Red gradient fill from 0% line down to maximum drawdown
+ *   - Dashed zero line at the top (no drawdown = at peak)
+ *   - Y-axis labels showing 0% and max drawdown %
+ *   - 400ms entrance delay (staggers after the equity curve above)
+ *   - Responsive resize handling
+ *
+ * ## Data Source:
+ *   Computes drawdown series from `EQUITY_DATA` in `content/report-data.ts`.
+ *   Formula: drawdown[i] = (equity[i] - peak) / peak × 100
+ *
+ * @module report/DrawdownChart
+ */
+
 "use client";
 
 import React, { useEffect, useRef, useCallback } from "react";

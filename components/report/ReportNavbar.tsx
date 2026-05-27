@@ -1,3 +1,18 @@
+/**
+ * @file ReportNavbar.tsx — Fixed navigation bar for the trading report page.
+ *
+ * A minimal, glassmorphism-style fixed navbar with:
+ * - Back arrow linking to the homepage
+ * - Skitla13 brand name in gold
+ * - "Report" badge
+ * - Green "live" pulsing indicator showing the report is up-to-date
+ *
+ * Uses Framer Motion for the entrance animation (fade + slide down).
+ * Inline styles are used intentionally for this standalone component.
+ *
+ * @module report/ReportNavbar
+ */
+
 "use client";
 
 import React from "react";

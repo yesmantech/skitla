@@ -1,3 +1,28 @@
+/**
+ * @file TradeLog.tsx — Expandable trade history log for the trading report.
+ *
+ * Renders a paginated list of individual trade signals with:
+ *   - Status dot (green=win, red=loss) with glow effect
+ *   - Pair name, direction badge (LONG/SHORT), TP count badge
+ *   - Max P&L percentage and date
+ *   - Expandable detail panel showing: entry price, stop loss, R:R ratio,
+ *     duration, trade notes (warning-style), and multi-TP breakdown
+ *   - "LATEST" badge on the most recent trade with pulse animation
+ *   - "STOP LOSS" badge on stopped-out trades
+ *   - "Show all" / "Show less" toggle (default: 10 trades visible)
+ *   - Win/Loss legend and summary (X/Y in profitto)
+ *
+ * ## Sub-components:
+ *   - TradeRow — Individual expandable trade row
+ *   - TPBadge — Take profit level badge (label, price, P&L, R:R)
+ *   - DetailItem — Key-value detail with icon (entry, SL, R:R, duration)
+ *
+ * ## Data Source:
+ *   Imports `RECENT_TRADES` from `content/report-data.ts` (most recent first).
+ *
+ * @module report/TradeLog
+ */
+
 "use client";
 
 import React, { useState } from "react";

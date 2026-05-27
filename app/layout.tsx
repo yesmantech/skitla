@@ -1,3 +1,27 @@
+/**
+ * @file layout.tsx — Root layout for the Skitla13 landing page (Next.js App Router).
+ *
+ * Defines the global HTML structure, fonts, metadata (SEO/OG/Twitter), and
+ * wraps all pages with shared UI layers:
+ * - CustomCursor — Custom cursor effect (hidden on mobile via CSS)
+ * - NoiseOverlay — Subtle film grain texture over the entire page
+ * - Preloader — Full-screen loading animation on first visit
+ * - SmoothScroll — Lenis-based smooth scrolling wrapper
+ *
+ * ## Typography:
+ *   - Inter (--font-inter) — Body text, UI elements
+ *   - Space Grotesk (--font-space) — Headlines, display text
+ *   Both loaded via next/font/google with `display: "swap"` for performance.
+ *
+ * ## SEO:
+ *   Comprehensive metadata including OpenGraph, Twitter cards, robots directives,
+ *   and structured author/publisher info. Target language: Italian (it_IT).
+ *
+ * ## Note on suppressHydrationWarning:
+ *   Added to <html> to prevent React hydration warnings caused by browser
+ *   extensions that modify the DOM (e.g., dark mode extensions, Grammarly).
+ */
+
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";

@@ -1,3 +1,21 @@
+/**
+ * @file ReportCTA.tsx — Call-to-action section at the bottom of the report page.
+ *
+ * Encourages visitors to join the Skitla13 community after seeing the track record.
+ * Features:
+ *   - Risk disclaimer badge at the top (Shield icon)
+ *   - "I numeri non mentono" heading with gold text effect
+ *   - Descriptive paragraph about transparency
+ *   - Tier-S premium CTA button (links to skitla13.com)
+ *   - Stacked avatar social proof strip (+500 membri attivi)
+ *
+ * ## CTA Button:
+ *   Uses the `.hero-cta-tier-s` CSS class system defined in globals.css
+ *   for the animated border, glow, shimmer, and surface effects.
+ *
+ * @module report/ReportCTA
+ */
+
 "use client";
 
 import React from "react";

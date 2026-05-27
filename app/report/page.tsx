@@ -1,3 +1,25 @@
+/**
+ * @file page.tsx — Trading performance report page for Skitla13.
+ *
+ * Renders the full trading report with the following sections:
+ *   1. ReportNavbar — Fixed glassmorphism navigation
+ *   2. ReportHero — Headline stats (win rate, profit, trades)
+ *   3. EquityCurve — Interactive equity chart (Canvas 2D)
+ *   4. DailyHeatmap — GitHub-style P&L calendar heatmap
+ *   5. StatsBento — KPI cards with sparklines
+ *   6. TradeLog — Paginated trade history table
+ *
+ * ## Visual Design:
+ *   - Pure black (#000) background
+ *   - Subtle ambient glow effects (gold top-left, purple bottom-right)
+ *   - Gold gradient dividers between sections
+ *   - Noise overlay from root layout
+ *
+ * ## Data Flow:
+ *   All data comes from `content/report-data.ts` which reads `trades.json`.
+ *   Each component imports its own data slice directly.
+ */
+
 "use client";
 
 import React from "react";
