@@ -1,0 +1,1435 @@
+{
+  "meta": {
+    "roomName": "Skitla13",
+    "startDate": "2026-04-22",
+    "initialCapital": 10000,
+    "calculationMethod": "Spot PNL without leverage and without fees. Entry calculated as average when an entry range is provided."
+  },
+  "dailyReports": [
+    {
+      "date": "2026-04-22",
+      "referenceCapital": 1000,
+      "netPnlUsd": 27,
+      "netPnlPercent": 2.7,
+      "closedTrades": 4,
+      "winningTrades": 1,
+      "losingTrades": 3,
+      "totalLossesUsd": -20,
+      "totalProfitsUsd": 47,
+      "finalResultUsd": 27
+    },
+    {
+      "date": "2026-04-23",
+      "referenceCapital": 1000,
+      "netPnlUsd": 43,
+      "netPnlPercent": 4.3,
+      "closedTrades": 3,
+      "winningTrades": 3,
+      "losingTrades": 0,
+      "totalLossesUsd": 0,
+      "totalProfitsUsd": 43,
+      "finalResultUsd": 43
+    },
+    {
+      "date": "2026-04-24",
+      "referenceCapital": 1000,
+      "netPnlUsd": 53,
+      "netPnlPercent": 5.3,
+      "closedTrades": 2,
+      "winningTrades": 2,
+      "losingTrades": 0,
+      "totalLossesUsd": 0,
+      "totalProfitsUsd": 53,
+      "finalResultUsd": 53
+    },
+    {
+      "date": "2026-04-25",
+      "referenceCapital": 1000,
+      "netPnlUsd": 116,
+      "netPnlPercent": 11.6,
+      "closedTrades": 3,
+      "winningTrades": 1,
+      "losingTrades": 2,
+      "totalLossesUsd": -16,
+      "totalProfitsUsd": 132,
+      "finalResultUsd": 116
+    },
+    {
+      "date": "2026-04-26",
+      "referenceCapital": 1000,
+      "netPnlUsd": 3,
+      "netPnlPercent": 0.3,
+      "closedTrades": 2,
+      "winningTrades": 1,
+      "losingTrades": 1,
+      "totalLossesUsd": -15,
+      "totalProfitsUsd": 18,
+      "finalResultUsd": 3
+    },
+    {
+      "date": "2026-04-27",
+      "referenceCapital": 1000,
+      "netPnlUsd": 58,
+      "netPnlPercent": 5.8,
+      "closedTrades": 3,
+      "winningTrades": 2,
+      "losingTrades": 1,
+      "totalLossesUsd": -10,
+      "totalProfitsUsd": 68,
+      "finalResultUsd": 58
+    },
+    {
+      "date": "2026-04-28",
+      "referenceCapital": 1000,
+      "netPnlUsd": 16,
+      "netPnlPercent": 1.6,
+      "closedTrades": 0,
+      "winningTrades": 0,
+      "losingTrades": 0,
+      "totalLossesUsd": 0,
+      "totalProfitsUsd": 16,
+      "finalResultUsd": 16
+    },
+    {
+      "date": "2026-04-29",
+      "referenceCapital": 1000,
+      "netPnlUsd": 0,
+      "netPnlPercent": 0,
+      "closedTrades": 5,
+      "winningTrades": 2,
+      "losingTrades": 3,
+      "totalLossesUsd": 0,
+      "totalProfitsUsd": 0,
+      "finalResultUsd": 0
+    },
+    {
+      "date": "2026-04-30",
+      "referenceCapital": 1000,
+      "netPnlUsd": 20,
+      "netPnlPercent": 2,
+      "closedTrades": 6,
+      "winningTrades": 2,
+      "losingTrades": 4,
+      "totalLossesUsd": -22,
+      "totalProfitsUsd": 43,
+      "finalResultUsd": 20
+    },
+    {
+      "date": "2026-05-01",
+      "referenceCapital": 1000,
+      "netPnlUsd": -67,
+      "netPnlPercent": -6.7,
+      "closedTrades": 4,
+      "winningTrades": 2,
+      "losingTrades": 2,
+      "totalLossesUsd": -230,
+      "totalProfitsUsd": 163,
+      "finalResultUsd": -67
+    },
+    {
+      "date": "2026-05-02",
+      "referenceCapital": 1000,
+      "netPnlUsd": 975,
+      "netPnlPercent": 97.5,
+      "closedTrades": 3,
+      "winningTrades": 2,
+      "losingTrades": 1,
+      "totalLossesUsd": -65,
+      "totalProfitsUsd": 1040,
+      "finalResultUsd": 975
+    },
+    {
+      "date": "2026-05-03",
+      "referenceCapital": 1000,
+      "netPnlUsd": 91,
+      "netPnlPercent": 9.1,
+      "closedTrades": 2,
+      "winningTrades": 2,
+      "losingTrades": 0,
+      "totalLossesUsd": 0,
+      "totalProfitsUsd": 91,
+      "finalResultUsd": 91
+    },
+    {
+      "date": "2026-05-04",
+      "referenceCapital": 1000,
+      "netPnlUsd": 20,
+      "netPnlPercent": 2,
+      "closedTrades": 1,
+      "winningTrades": 1,
+      "losingTrades": 0,
+      "totalLossesUsd": 0,
+      "totalProfitsUsd": 20,
+      "finalResultUsd": 20
+    },
+    {
+      "date": "2026-05-05",
+      "referenceCapital": 1000,
+      "netPnlUsd": 60,
+      "netPnlPercent": 6,
+      "closedTrades": 1,
+      "winningTrades": 1,
+      "losingTrades": 0,
+      "totalLossesUsd": 0,
+      "totalProfitsUsd": 60,
+      "finalResultUsd": 60
+    },
+    {
+      "date": "2026-05-06",
+      "referenceCapital": 1000,
+      "netPnlUsd": 273,
+      "netPnlPercent": 27.3,
+      "closedTrades": 3,
+      "winningTrades": 3,
+      "losingTrades": 0,
+      "totalLossesUsd": 0,
+      "totalProfitsUsd": 273,
+      "finalResultUsd": 273
+    },
+    {
+      "date": "2026-05-07",
+      "referenceCapital": 1000,
+      "netPnlUsd": 225,
+      "netPnlPercent": 22.5,
+      "closedTrades": 2,
+      "winningTrades": 2,
+      "losingTrades": 0,
+      "totalLossesUsd": 0,
+      "totalProfitsUsd": 225,
+      "finalResultUsd": 225
+    },
+    {
+      "date": "2026-05-08",
+      "referenceCapital": 1000,
+      "netPnlUsd": -42,
+      "netPnlPercent": -4.2,
+      "closedTrades": 2,
+      "winningTrades": 1,
+      "losingTrades": 1,
+      "totalLossesUsd": -101,
+      "totalProfitsUsd": 59,
+      "finalResultUsd": -42
+    },
+    {
+      "date": "2026-05-09",
+      "referenceCapital": 1000,
+      "netPnlUsd": 257,
+      "netPnlPercent": 25.7,
+      "closedTrades": 2,
+      "winningTrades": 2,
+      "losingTrades": 0,
+      "totalLossesUsd": 0,
+      "totalProfitsUsd": 257,
+      "finalResultUsd": 257
+    },
+    {
+      "date": "2026-05-10",
+      "referenceCapital": 1000,
+      "netPnlUsd": -130,
+      "netPnlPercent": -13,
+      "closedTrades": 3,
+      "winningTrades": 1,
+      "losingTrades": 2,
+      "totalLossesUsd": -170,
+      "totalProfitsUsd": 40,
+      "finalResultUsd": -130
+    },
+    {
+      "date": "2026-05-11",
+      "referenceCapital": 1000,
+      "netPnlUsd": 74,
+      "netPnlPercent": 7.4,
+      "closedTrades": 2,
+      "winningTrades": 2,
+      "losingTrades": 0,
+      "totalLossesUsd": 0,
+      "totalProfitsUsd": 74,
+      "finalResultUsd": 74
+    },
+    {
+      "date": "2026-05-12",
+      "referenceCapital": 1000,
+      "netPnlUsd": 130,
+      "netPnlPercent": 13,
+      "closedTrades": 4,
+      "winningTrades": 3,
+      "losingTrades": 1,
+      "totalLossesUsd": -50,
+      "totalProfitsUsd": 180,
+      "finalResultUsd": 130
+    },
+    {
+      "date": "2026-05-13",
+      "referenceCapital": 1000,
+      "netPnlUsd": 4.0,
+      "netPnlPercent": 0.37,
+      "closedTrades": 1,
+      "winningTrades": 1,
+      "losingTrades": 0,
+      "totalLossesUsd": 0,
+      "totalProfitsUsd": 4.0,
+      "finalResultUsd": 4.0
+    },
+    {
+      "date": "2026-05-14",
+      "referenceCapital": 1000,
+      "netPnlUsd": -94.0,
+      "netPnlPercent": -9.36,
+      "closedTrades": 2,
+      "winningTrades": 0,
+      "losingTrades": 1,
+      "totalLossesUsd": -94.0,
+      "totalProfitsUsd": 0,
+      "finalResultUsd": -94.0
+    },
+    {
+      "date": "2026-05-15",
+      "referenceCapital": 1000,
+      "netPnlUsd": 10.0,
+      "netPnlPercent": 0.95,
+      "closedTrades": 1,
+      "winningTrades": 1,
+      "losingTrades": 0,
+      "totalLossesUsd": 0,
+      "totalProfitsUsd": 10.0,
+      "finalResultUsd": 10.0
+    },
+    {
+      "date": "2026-05-18",
+      "referenceCapital": 1000,
+      "netPnlUsd": 29.0,
+      "netPnlPercent": 2.86,
+      "closedTrades": 2,
+      "winningTrades": 2,
+      "losingTrades": 0,
+      "totalLossesUsd": 0,
+      "totalProfitsUsd": 29.0,
+      "finalResultUsd": 29.0
+    },
+    {
+      "date": "2026-05-22",
+      "referenceCapital": 1000,
+      "netPnlUsd": 6.0,
+      "netPnlPercent": 0.63,
+      "closedTrades": 1,
+      "winningTrades": 1,
+      "losingTrades": 0,
+      "totalLossesUsd": 0,
+      "totalProfitsUsd": 6.0,
+      "finalResultUsd": 6.0
+    },
+    {
+      "date": "2026-05-24",
+      "referenceCapital": 1000,
+      "netPnlUsd": -82.0,
+      "netPnlPercent": -8.23,
+      "closedTrades": 1,
+      "winningTrades": 0,
+      "losingTrades": 1,
+      "totalLossesUsd": -82.0,
+      "totalProfitsUsd": 0,
+      "finalResultUsd": -82.0
+    },
+    {
+      "date": "2026-05-25",
+      "referenceCapital": 1000,
+      "netPnlUsd": 30.0,
+      "netPnlPercent": 2.98,
+      "closedTrades": 2,
+      "winningTrades": 2,
+      "losingTrades": 0,
+      "totalLossesUsd": 0,
+      "totalProfitsUsd": 30.0,
+      "finalResultUsd": 30.0
+    },
+    {
+      "date": "2026-05-26",
+      "referenceCapital": 1000,
+      "netPnlUsd": 113.0,
+      "netPnlPercent": 11.32,
+      "closedTrades": 2,
+      "winningTrades": 1,
+      "losingTrades": 1,
+      "totalLossesUsd": -70.0,
+      "totalProfitsUsd": 184.0,
+      "finalResultUsd": 113.0
+    }
+  ],
+  "trades": [
+    {
+      "date": "2026-04-22",
+      "pair": "XRP/USDT",
+      "direction": "SHORT",
+      "pnl": 1.2,
+      "status": "tp_hit",
+      "note": "Running, protetto a BE",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-22",
+      "pair": "BTC/USDT",
+      "direction": "SHORT",
+      "pnl": 1.5,
+      "status": "tp_hit",
+      "note": "Re-entry",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-22",
+      "pair": "DOGE/USDT",
+      "direction": "SHORT",
+      "pnl": 1.5,
+      "status": "tp_hit",
+      "note": "Re-entry",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-22",
+      "pair": "ETH/USDT",
+      "direction": "SHORT",
+      "pnl": 0.5,
+      "status": "tp_hit",
+      "note": "Re-entry",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-22",
+      "pair": "—",
+      "direction": "SHORT",
+      "pnl": -1,
+      "status": "stopped",
+      "note": "Full stop",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-22",
+      "pair": "—",
+      "direction": "SHORT",
+      "pnl": -0.5,
+      "status": "stopped",
+      "note": "Stop tecnico ridotto",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-22",
+      "pair": "—",
+      "direction": "SHORT",
+      "pnl": -0.5,
+      "status": "stopped",
+      "note": "Stop tecnico ridotto",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-23",
+      "pair": "DOGE/USDT",
+      "direction": "SHORT",
+      "pnl": 0.8,
+      "status": "tp_hit",
+      "note": "TP1 colpito",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 0.0965,
+          "pnl": 0.8
+        }
+      ]
+    },
+    {
+      "date": "2026-04-23",
+      "pair": "ENJ/USDT",
+      "direction": "SHORT",
+      "pnl": 2,
+      "status": "tp_hit",
+      "note": "TP1, TP2, TP3",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 0.07,
+          "pnl": 0.8
+        },
+        {
+          "label": "TP2",
+          "price": 0.0685,
+          "pnl": 1.4
+        },
+        {
+          "label": "TP3",
+          "price": 0.067,
+          "pnl": 2
+        }
+      ]
+    },
+    {
+      "date": "2026-04-23",
+      "pair": "SKR/USDT",
+      "direction": "SHORT",
+      "pnl": 1.5,
+      "status": "tp_hit",
+      "note": "TP1, TP2 (running per altri TP)",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 0.0195,
+          "pnl": 0.8
+        },
+        {
+          "label": "TP2",
+          "price": 0.0185,
+          "pnl": 1.5
+        }
+      ]
+    },
+    {
+      "date": "2026-04-24",
+      "pair": "SKR/USDT",
+      "direction": "SHORT",
+      "pnl": 3,
+      "status": "tp_hit",
+      "note": "TP1→TP4, 3R",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 0.0195,
+          "pnl": 0.9
+        },
+        {
+          "label": "TP2",
+          "price": 0.0185,
+          "pnl": 1.6
+        },
+        {
+          "label": "TP3",
+          "price": 0.0175,
+          "pnl": 2.3
+        },
+        {
+          "label": "TP4",
+          "price": 0.0165,
+          "pnl": 3
+        }
+      ]
+    },
+    {
+      "date": "2026-04-24",
+      "pair": "AXS/USDT",
+      "direction": "SHORT",
+      "pnl": 2.3,
+      "status": "tp_hit",
+      "note": "2 stop iniziali poi distribuzione completa. Lordo 2.94R, perdite -0.6R, netto 2.34R",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-25",
+      "pair": "PI/USDT",
+      "direction": "SHORT",
+      "pnl": 0,
+      "status": "breakeven",
+      "note": "Chiuso a breakeven",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-25",
+      "pair": "ORCA/USDT",
+      "direction": "SHORT",
+      "pnl": 13.2,
+      "status": "tp_hit",
+      "note": "Movimento completo TP3, 13.2R",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 1.6,
+          "pnl": 5.3
+        },
+        {
+          "label": "TP2",
+          "price": 1.55,
+          "pnl": 8.3
+        },
+        {
+          "label": "TP3",
+          "price": 1.5,
+          "pnl": 13.2
+        }
+      ]
+    },
+    {
+      "date": "2026-04-25",
+      "pair": "PI/USDT",
+      "direction": "SHORT",
+      "pnl": -1.6,
+      "status": "stopped",
+      "note": "Stop loss colpito",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-26",
+      "pair": "BTC/USDT",
+      "direction": "SHORT",
+      "pnl": -1.5,
+      "status": "stopped",
+      "note": "Stop loss, -1.5R",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-26",
+      "pair": "UMXM/USDT",
+      "direction": "LONG",
+      "pnl": 1.8,
+      "status": "tp_hit",
+      "note": "TP1, TP2, TP3 colpiti, +1.8R",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 2.05,
+          "pnl": 0.6
+        },
+        {
+          "label": "TP2",
+          "price": 2.12,
+          "pnl": 1.2
+        },
+        {
+          "label": "TP3",
+          "price": 2.2,
+          "pnl": 1.8
+        }
+      ]
+    },
+    {
+      "date": "2026-04-27",
+      "pair": "BTC/USDT",
+      "direction": "SHORT",
+      "pnl": 1.8,
+      "status": "tp_hit",
+      "note": "TP2, posizione gestita, 1.8R",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-27",
+      "pair": "PENGU/USDT",
+      "direction": "SHORT",
+      "pnl": -1,
+      "status": "stopped",
+      "note": "Stop loss, -1R",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-27",
+      "pair": "LUNC/USDT",
+      "direction": "SHORT",
+      "pnl": 5,
+      "status": "tp_hit",
+      "note": "TP6 colpito, 5R",
+      "takeProfits": [
+        {
+          "label": "TP6",
+          "price": 6.6e-05,
+          "pnl": 5
+        }
+      ]
+    },
+    {
+      "date": "2026-04-28",
+      "pair": "Operatività",
+      "direction": "SHORT",
+      "pnl": 1.6,
+      "status": "tp_hit",
+      "note": "Dettaglio non disponibile nel report",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-29",
+      "pair": "SKYAI/USDT",
+      "direction": "SHORT",
+      "pnl": 1.5,
+      "status": "tp_hit",
+      "note": "TP1 colpito",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 0.31,
+          "pnl": 1.5
+        }
+      ]
+    },
+    {
+      "date": "2026-04-29",
+      "pair": "MEGA/USDT",
+      "direction": "SHORT",
+      "pnl": 1.5,
+      "status": "tp_hit",
+      "note": "TP1 colpito",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 0.15,
+          "pnl": 1.5
+        }
+      ]
+    },
+    {
+      "date": "2026-04-29",
+      "pair": "LUNC/USDT",
+      "direction": "SHORT",
+      "pnl": -1,
+      "status": "stopped",
+      "note": "1 stop + gestione positiva",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-29",
+      "pair": "SKYAI/USDT",
+      "direction": "SHORT",
+      "pnl": -2,
+      "status": "stopped",
+      "note": "Stop tecnico",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-29",
+      "pair": "PENGU/USDT",
+      "direction": "SHORT",
+      "pnl": 0,
+      "status": "breakeven",
+      "note": "Running con stop a BE",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-30",
+      "pair": "LUNC/USDT",
+      "direction": "SHORT",
+      "pnl": -1,
+      "status": "stopped",
+      "note": "Stop loss -1R",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-30",
+      "pair": "BTC/USDT",
+      "direction": "SHORT",
+      "pnl": -0.38,
+      "status": "stopped",
+      "note": "Stop loss -0.38R",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-30",
+      "pair": "ETH/USDT",
+      "direction": "SHORT",
+      "pnl": -0.48,
+      "status": "stopped",
+      "note": "Stop loss -0.48R",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-30",
+      "pair": "SKYAI/USDT",
+      "direction": "SHORT",
+      "pnl": -0.37,
+      "status": "stopped",
+      "note": "Stop loss -0.37R",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-30",
+      "pair": "MEGA/USDT",
+      "direction": "SHORT",
+      "pnl": 3.4,
+      "status": "tp_hit",
+      "note": "TP1 poi chiuso a BE, +3.4R",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-04-30",
+      "pair": "B/USDT",
+      "direction": "SHORT",
+      "pnl": 0.83,
+      "status": "tp_hit",
+      "note": "TP1 poi BE, +0.9R",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-01",
+      "pair": "B/USDT",
+      "direction": "SHORT",
+      "pnl": -9,
+      "status": "stopped",
+      "note": "Stop loss colpito",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-01",
+      "pair": "TAG/USDT",
+      "direction": "SHORT",
+      "pnl": 14,
+      "status": "tp_hit",
+      "note": "TP3 colpito",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 0.00144,
+          "pnl": 5.88
+        },
+        {
+          "label": "TP2",
+          "price": 0.00134,
+          "pnl": 12.42
+        },
+        {
+          "label": "TP3",
+          "price": 0.00122,
+          "pnl": 14
+        }
+      ]
+    },
+    {
+      "date": "2026-05-01",
+      "pair": "SKY/USDT",
+      "direction": "SHORT",
+      "pnl": 2.3,
+      "status": "tp_hit",
+      "note": "TP1, ancora running",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 0.079,
+          "pnl": 2.3
+        }
+      ]
+    },
+    {
+      "date": "2026-05-01",
+      "pair": "SKYAI/USDT",
+      "direction": "SHORT",
+      "pnl": -14,
+      "status": "stopped",
+      "note": "Stop loss colpito",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-02",
+      "pair": "B/USDT",
+      "direction": "SHORT",
+      "pnl": -6.5,
+      "status": "stopped",
+      "note": "Stop loss colpito",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-02",
+      "pair": "LAB/USDT",
+      "direction": "LONG",
+      "pnl": 103,
+      "status": "tp_hit",
+      "note": "TP3 colpito — trade del mese 🔥",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 1.75,
+          "pnl": 23.67,
+          "rr": "1:1.03"
+        },
+        {
+          "label": "TP2",
+          "price": 2.2,
+          "pnl": 55.48,
+          "rr": "1:2.42"
+        },
+        {
+          "label": "TP3",
+          "price": 2.8,
+          "pnl": 103,
+          "rr": "1:4.26"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-02",
+      "pair": "BTC/USDT",
+      "direction": "LONG",
+      "pnl": 1,
+      "status": "tp_hit",
+      "note": "TP1 colpito",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 79200,
+          "pnl": 1,
+          "rr": "1:0.99"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-03",
+      "pair": "BTC/USDT",
+      "direction": "SHORT",
+      "pnl": 2.5,
+      "status": "tp_hit",
+      "note": "Da TP1 a TP3, ancora running",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-03",
+      "pair": "SKYAI/USDT",
+      "direction": "SHORT",
+      "pnl": 6.6,
+      "status": "tp_hit",
+      "note": "TP1 colpito, ancora running",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-04",
+      "pair": "BTC/USDT",
+      "direction": "SHORT",
+      "pnl": 2,
+      "status": "tp_hit",
+      "note": "TP5 colpito, ancora running",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-05",
+      "pair": "SKY/USDT",
+      "direction": "SHORT",
+      "pnl": 6,
+      "status": "tp_hit",
+      "note": "TP1 colpito dopo 3 giorni di lateralizzazione",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-06",
+      "pair": "BTC/USDT",
+      "direction": "SHORT",
+      "pnl": 1.1,
+      "status": "tp_hit",
+      "note": "TP1 colpito",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-06",
+      "pair": "SKYAI/USDT",
+      "direction": "SHORT",
+      "pnl": 6.12,
+      "status": "tp_hit",
+      "note": "TP2 colpito",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-06",
+      "pair": "LAB/USDT",
+      "direction": "LONG",
+      "pnl": 20,
+      "status": "tp_hit",
+      "note": "Da TP4 a TP5, +20% (differenza)",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-07",
+      "pair": "BTC/USDT",
+      "direction": "SHORT",
+      "pnl": 2.5,
+      "status": "tp_hit",
+      "note": "Da TP1 a TP3",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-07",
+      "pair": "SKYAI/USDT",
+      "direction": "SHORT",
+      "pnl": 20,
+      "status": "tp_hit",
+      "note": "Da TP2 a TP6",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-08",
+      "pair": "STRK/USDT",
+      "direction": "SHORT",
+      "pnl": -10.1,
+      "status": "stopped",
+      "note": "Stop loss colpito",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-08",
+      "pair": "TON/USDT",
+      "direction": "SHORT",
+      "pnl": 5.9,
+      "status": "tp_hit",
+      "note": "TP1 colpito, ancora running",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-09",
+      "pair": "LAB/USDT",
+      "direction": "LONG",
+      "pnl": 19,
+      "status": "tp_hit",
+      "note": "Da TP5 a TP6, tutti i TP presi 🔥",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-09",
+      "pair": "TON/USDT",
+      "direction": "SHORT",
+      "pnl": 6.7,
+      "status": "tp_hit",
+      "note": "Da TP1 a TP2, ancora running",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-10",
+      "pair": "LAB/USDT",
+      "direction": "SHORT",
+      "pnl": -12,
+      "status": "stopped",
+      "note": "Stop loss colpito",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-10",
+      "pair": "PEPE/USDT",
+      "direction": "LONG",
+      "pnl": -5,
+      "status": "stopped",
+      "note": "Stop loss colpito",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-10",
+      "pair": "LAB/USDT",
+      "direction": "SHORT",
+      "pnl": 4,
+      "status": "tp_hit",
+      "note": "TP1 colpito, ancora running",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-11",
+      "pair": "LAB/USDT",
+      "direction": "SHORT",
+      "pnl": 3.57,
+      "status": "tp_hit",
+      "note": "Da TP1 a TP2",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-11",
+      "pair": "BILL/USDT",
+      "direction": "SHORT",
+      "pnl": 3.83,
+      "status": "tp_hit",
+      "note": "TP1 colpito, running",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-12",
+      "pair": "XRP/USDT",
+      "direction": "SHORT",
+      "pnl": 4,
+      "status": "tp_hit",
+      "note": "TP3 colpito",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-12",
+      "pair": "H/USDT",
+      "direction": "SHORT",
+      "pnl": 8,
+      "status": "tp_hit",
+      "note": "TP2 colpito, running",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-12",
+      "pair": "LAB/USDT",
+      "direction": "SHORT",
+      "pnl": 6,
+      "status": "tp_hit",
+      "note": "TP1 colpito",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-12",
+      "pair": "BILL/USDT",
+      "direction": "SHORT",
+      "pnl": -5,
+      "status": "stopped",
+      "note": "Stop loss colpito",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-13",
+      "pair": "BTC/USDT",
+      "direction": "SHORT",
+      "pnl": 0.37,
+      "status": "be",
+      "entry": 81100,
+      "sl": 81320,
+      "stopLossPnl": null,
+      "note": "",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 80850,
+          "pnl": 0.31
+        },
+        {
+          "label": "TP2",
+          "price": 80450,
+          "pnl": 0.8
+        }
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "pair": "BTC/USDT",
+      "direction": "SHORT",
+      "pnl": 0,
+      "status": "be",
+      "entry": 79.5,
+      "sl": 81.05,
+      "stopLossPnl": null,
+      "note": "",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-14",
+      "pair": "LAB/USDT",
+      "direction": "SHORT",
+      "pnl": -9.36,
+      "status": "stopped",
+      "entry": 5.4,
+      "sl": 6.22,
+      "stopLossPnl": null,
+      "note": "",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 5.22,
+          "pnl": 3.33
+        },
+        {
+          "label": "TP2",
+          "price": 4.95,
+          "pnl": 8.33
+        }
+      ]
+    },
+    {
+      "date": "2026-05-15",
+      "pair": "HYPE/USDT",
+      "direction": "SHORT",
+      "pnl": 0.95,
+      "status": "be",
+      "entry": 45.3,
+      "sl": 47.6,
+      "stopLossPnl": null,
+      "note": "",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 44.2,
+          "pnl": 2.43
+        },
+        {
+          "label": "TP2",
+          "price": 43.4,
+          "pnl": 4.19
+        }
+      ]
+    },
+    {
+      "date": "2026-05-15",
+      "pair": "ETH/USDT",
+      "direction": "SHORT",
+      "pnl": 1.06,
+      "status": "be",
+      "entry": 2255,
+      "sl": 2463,
+      "stopLossPnl": null,
+      "note": "",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 2218,
+          "pnl": 1.64
+        },
+        {
+          "label": "TP1",
+          "price": 2218,
+          "pnl": 1.64
+        },
+        {
+          "label": "TP2",
+          "price": 2138,
+          "pnl": 5.19
+        }
+      ]
+    },
+    {
+      "date": "2026-05-13",
+      "pair": "BNB/USDT",
+      "direction": "SHORT",
+      "pnl": 1.8,
+      "status": "be",
+      "entry": 668,
+      "sl": 694,
+      "stopLossPnl": null,
+      "note": "",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 660,
+          "pnl": 1.2
+        },
+        {
+          "label": "TP1",
+          "price": 660,
+          "pnl": 1.2
+        },
+        {
+          "label": "TP2",
+          "price": 648,
+          "pnl": 2.99
+        }
+      ]
+    },
+    {
+      "date": "2026-05-22",
+      "pair": "NEAR/USDT",
+      "direction": "SHORT",
+      "pnl": 0.63,
+      "status": "be",
+      "entry": 2.28,
+      "sl": 2.5,
+      "stopLossPnl": null,
+      "note": "",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 2.18,
+          "pnl": 4.39
+        }
+      ]
+    },
+    {
+      "date": "2026-05-23",
+      "pair": "NEAR/USDT",
+      "direction": "SHORT",
+      "pnl": -8.23,
+      "status": "stopped",
+      "entry": 2.31,
+      "sl": 2.5,
+      "stopLossPnl": null,
+      "note": "",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-24",
+      "pair": "SKYAI/USDT",
+      "direction": "SHORT",
+      "pnl": 2.37,
+      "status": "be",
+      "entry": 0.331,
+      "sl": 0.38366,
+      "stopLossPnl": null,
+      "note": "",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 0.322,
+          "pnl": 2.72
+        },
+        {
+          "label": "TP2",
+          "price": 0.314,
+          "pnl": 5.14
+        },
+        {
+          "label": "TP3",
+          "price": 0.302,
+          "pnl": 8.76
+        }
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "pair": "ZEC/USDT",
+      "direction": "SHORT",
+      "pnl": 0.61,
+      "status": "be",
+      "entry": 660,
+      "sl": 705,
+      "stopLossPnl": null,
+      "note": "",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 648,
+          "pnl": 1.82
+        }
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "pair": "FET/USDT",
+      "direction": "LONG",
+      "pnl": 18.36,
+      "status": "tp_hit",
+      "entry": 0.213,
+      "sl": 0.1912,
+      "stopLossPnl": null,
+      "note": "",
+      "takeProfits": [
+        {
+          "label": "TP5",
+          "price": 0.565,
+          "pnl": 165.26
+        }
+      ]
+    },
+    {
+      "date": "2026-05-26",
+      "pair": "NEAR/USDT",
+      "direction": "SHORT",
+      "pnl": -7.04,
+      "status": "stopped",
+      "entry": 2.7,
+      "sl": 2.89,
+      "stopLossPnl": null,
+      "note": "",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-23",
+      "pair": "BTC/USDT",
+      "direction": "SHORT",
+      "pnl": 0,
+      "status": "setup",
+      "entry": 76600,
+      "sl": 77850,
+      "stopLossPnl": null,
+      "note": "Running",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-21",
+      "pair": "HYPE/USDT",
+      "direction": "SHORT",
+      "pnl": 2.36,
+      "status": "tp_hit",
+      "entry": 60,
+      "sl": 64,
+      "stopLossPnl": null,
+      "note": "Running, 3 TP hit",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 58.4,
+          "pnl": 2.67
+        },
+        {
+          "label": "TP2",
+          "price": 56.8,
+          "pnl": 5.33
+        },
+        {
+          "label": "TP3",
+          "price": 54.9,
+          "pnl": 8.5
+        }
+      ]
+    },
+    {
+      "date": "2026-05-22",
+      "pair": "LAB/USDT",
+      "direction": "SHORT",
+      "pnl": 0,
+      "status": "setup",
+      "entry": 4.53,
+      "sl": 4.858,
+      "stopLossPnl": null,
+      "note": "Running",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-05-22",
+      "pair": "BNB/USDT",
+      "direction": "SHORT",
+      "pnl": 0.39,
+      "status": "tp_hit",
+      "entry": 652,
+      "sl": 664,
+      "stopLossPnl": null,
+      "note": "Running, 2 TP hit",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 646,
+          "pnl": 0.92
+        },
+        {
+          "label": "TP2",
+          "price": 640,
+          "pnl": 1.84
+        }
+      ]
+    },
+    {
+      "date": "2026-05-26",
+      "pair": "SUI/USDT",
+      "direction": "SHORT",
+      "pnl": 2.19,
+      "status": "tp_hit",
+      "entry": 1.038,
+      "sl": 1.066,
+      "stopLossPnl": null,
+      "note": "Running, 5 TP hit",
+      "takeProfits": [
+        {
+          "label": "TP2",
+          "price": 1.024,
+          "pnl": 1.35
+        },
+        {
+          "label": "TP3",
+          "price": 1.016,
+          "pnl": 2.12
+        },
+        {
+          "label": "TP4",
+          "price": 1.008,
+          "pnl": 2.89
+        },
+        {
+          "label": "TP5",
+          "price": 0.998,
+          "pnl": 3.85
+        },
+        {
+          "label": "TP6",
+          "price": 0.985,
+          "pnl": 5.11
+        }
+      ]
+    },
+    {
+      "date": "2026-05-27",
+      "pair": "FET/USDT",
+      "direction": "SHORT",
+      "pnl": 0.24,
+      "status": "tp_hit",
+      "entry": 0.242,
+      "sl": 0.2645,
+      "stopLossPnl": null,
+      "note": "Running, 1 TP hit",
+      "takeProfits": [
+        {
+          "label": "TP1",
+          "price": 0.2385,
+          "pnl": 1.45
+        }
+      ]
+    }
+  ]
+}

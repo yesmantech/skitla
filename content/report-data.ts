@@ -146,10 +146,11 @@ for (const report of dailyReports) {
 
 // ── KPI Stats ───────────────────────────────────────────
 
-// Win rate based on profitable DAYS (more accurate than per-trade counts)
+// Win rate based on profitable DAYS — excludes days with no operations
 const profitableDays = dailyReports.filter((r) => r.netPnlPercent > 0).length;
 const lossDays = dailyReports.filter((r) => r.netPnlPercent < 0).length;
-const totalDays = dailyReports.length;
+const operativeDays = dailyReports.filter((r) => r.closedTrades > 0).length;
+const totalDays = operativeDays;
 
 const winRate = totalDays > 0
   ? Math.round((profitableDays / totalDays) * 1000) / 10

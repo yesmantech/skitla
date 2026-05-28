@@ -1,15 +1,34 @@
-/**
- * @file SmoothScroll.tsx — Lenis-based smooth scrolling wrapper stub.
- *
- * Currently a passthrough wrapper that renders children directly.
- *
- * @todo Implement smooth scrolling with:
- *   - Lenis library for butter-smooth scroll physics
- *   - Custom scroll speed and easing curves
- *   - Integration with scroll-driven animations (GSAP ScrollTrigger)
- *   - Disable on mobile for native scroll performance
- *   - RAF (requestAnimationFrame) loop for 60fps rendering
- */
-
 "use client";
-export default function SmoothScroll({ children }: { children?: React.ReactNode }) { return <>{children}</>; }
+
+import { useEffect } from "react";
+import Lenis from "lenis";
+
+export default function SmoothScroll({ children }: { children: React.ReactNode }) {
+    useEffect(() => {
+        if (typeof window === "undefined") return;
+
+        // TIER S OPTIMIZATION: Disable smooth scroll on mobile/tablet for native performance
+        if (window.innerWidth < 1024) return;
+
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            orientation: "vertical",
+            gestureOrientation: "vertical",
+            smoothWheel: true,
+        });
+
+        function raf(time: number) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        return () => {
+            lenis.destroy();
+        };
+    }, []);
+
+    return <>{children}</>;
+}
