@@ -2579,6 +2579,42 @@
       "stopLossPnl": null,
       "note": "Running",
       "takeProfits": []
+    },
+    {
+      "date": "2026-06-23",
+      "pair": "XAUT/USDT",
+      "direction": "LONG",
+      "pnl": 0.0,
+      "status": "setup",
+      "entry": 4089.0000000000005,
+      "sl": 4083.0,
+      "stopLossPnl": null,
+      "note": "Running",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-06-23",
+      "pair": "XAUT/USDT",
+      "direction": "LONG",
+      "pnl": 0.0,
+      "status": "setup",
+      "entry": 4089.0000000000005,
+      "sl": 4083.0,
+      "stopLossPnl": null,
+      "note": "Running",
+      "takeProfits": []
+    },
+    {
+      "date": "2026-06-23",
+      "pair": "XAUT/USDT",
+      "direction": "LONG",
+      "pnl": 0.0,
+      "status": "setup",
+      "entry": 4089.0000000000005,
+      "sl": 4083.0,
+      "stopLossPnl": null,
+      "note": "Running",
+      "takeProfits": []
     }
   ]
 }
