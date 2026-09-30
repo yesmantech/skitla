@@ -1,54 +1,34 @@
-/**
- * @file faq.ts — FAQ content data for the Skitla13 landing page.
- *
- * Array of question/answer pairs displayed in the FAQ accordion section.
- * Content is in Italian, targeting prospective community members.
- *
- * Note: Placeholders like [REFERRAL_LINK] and [GUARANTEE_WINDOW] should be
- * replaced with actual values when the FAQ component renders them.
- *
- * @module content/faq
- */
-
 export const FAQS = [
     {
-        question: "È adatto ai principianti?",
-        answer: "Sì. Partiamo dalle basi nel nostro modulo 'Foundation' prima di passare a strategie avanzate. Tuttavia, ricorda che il trading richiede tempo e dedizione per essere padroneggiato.",
+        "question": "Quali sale Gold sono disponibili?",
+        "answer": "SKITLA scalping XAU e SKITLA sniper XAU sono le due sale dedicate all’oro. Puoi seguirne una o entrambe secondo il tuo piano; le posizioni possono sovrapporsi, quindi considera sempre il rischio complessivo."
     },
     {
-        question: "Garantite profitti?",
-        answer: "No. Nessun formatore onesto garantisce profitti. Forniamo educazione, analisi e community. I tuoi risultati dipenderanno dalla tua disciplina e dalle condizioni di mercato.",
+        "question": "Come richiedo l’accesso alle sale Gold?",
+        "answer": "Avvia @SkitlaSalaSegnaliBot su Telegram. Il percorso richiede registrazione tramite referral FPG, KYC e almeno 300 euro o equivalente USD effettivamente accreditati sul tuo conto. L’amministratore verifica i requisiti prima di fornire le istruzioni di accesso."
     },
     {
-        question: "Qual è la strategia specifica che insegnate?",
-        answer: "Ci concentriamo sulla Price Action e sulla struttura del mercato, combinando i livelli istituzionali chiave. È un approccio basato sulla logica, non su indicatori ritardati.",
+        "question": "Il deposito è una quota da versare a SKITLA?",
+        "answer": "No. Il deposito è capitale sul tuo conto FPG ed è esposto al rischio di trading. Non viene versato agli amministratori Telegram. SKITLA può ricevere commissioni di affiliazione dal broker."
     },
     {
-        question: "Come funziona l'Accesso di Prova Riservato?",
-        answer: "Per mantenere alta la qualità della community, l'accesso è filtrato. Devi iscriverti tramite [REFERRAL_LINK] e confermare il deposito. Questo assicura che entrino solo persone realmente impegnate.",
+        "question": "Il copy trading FPG è già disponibile?",
+        "answer": "No, è in arrivo. Attualmente le due sale pubblicano segnali e l’esecuzione delle operazioni resta a cura dell’utente. Disponibilità e condizioni del copy trading saranno comunicate nei canali ufficiali."
     },
     {
-        question: "Di quali piattaforme ho bisogno?",
-        answer: "Avrai bisogno di un account TradingView per l'analisi e di un broker per eseguire i trade. All'interno troverai i nostri suggerimenti sulle piattaforme supportate.",
+        "question": "Come funzionano le membership?",
+        "answer": "Sono disponibili percorsi Premium mensili e annuali, distinti dall’accesso Gold tramite FPG. Contatta @SKITLAService per contenuti, disponibilità, costo e condizioni del piano prima dell’adesione."
     },
     {
-        question: "Posso annullare la mia iscrizione?",
-        answer: "Sì, puoi annullare l'abbonamento in qualsiasi momento dalla tua dashboard personale. Non ci sono contratti vincolanti a lungo termine.",
+        "question": "Garantite profitti?",
+        "answer": "No. Il trading può comportare perdite. I risultati storici e i riepiloghi non garantiscono risultati futuri né risultati uguali per tutti. È necessario valutare esperienza, obiettivi e rischio prima di operare."
     },
     {
-        question: "Quanto tempo devo dedicarci ogni giorno?",
-        answer: "Consigliamo almeno 30-60 minuti al giorno per lo studio e l'analisi se vuoi vedere progressi reali e costanti.",
+        "question": "A cosa si riferiscono i numeri Exness?",
+        "answer": "Al riepilogo di tutti i conti fornito dal titolare il 30 settembre 2026, con filtro ultimi 365 giorni. Il netto è calcolato sottraendo perdite e costi dai profitti mostrati. Il volume misura il valore negoziato, non il guadagno. Non sono risultati dei clienti delle sale Gold."
     },
     {
-        question: "Fornite segnali?",
-        answer: "Forniamo idee di trading e analisi approfondite, non segnali ciechi. Il nostro obiettivo è insegnarti a pescare, affinché tu possa diventare autosufficiente.",
-    },
-    {
-        question: "C'è una politica di rimborso?",
-        answer: "Offriamo una Garanzia di Idoneità sulle quote associative se senti che la membership non fa per te entro [GUARANTEE_WINDOW]. Consulta i nostri termini per i dettagli completi.",
-    },
-    {
-        question: "Come ottengo l'accesso a Discord?",
-        answer: "Immediatamente dopo l'acquisto o l'approvazione della prova, riceverai un'email con il link di invito privato per il nostro server Discord esclusivo.",
-    },
+        "question": "Come contatto il supporto?",
+        "answer": "Su Telegram: @SKITLAService oppure @Skitla13Fx_Real. Verifica sempre il nome utente completo: i contatti ufficiali non ti scrivono per primi. Per le condizioni di rinnovo, annullamento o rimborso della tua membership chiedi al supporto prima di aderire."
+    }
 ];

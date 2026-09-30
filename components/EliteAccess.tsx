@@ -30,65 +30,58 @@ interface PricingCard {
 
 const cards: PricingCard[] = [
     {
-        eyebrow: "COPY TRADING",
-        title: "Copy Trading Passivo",
-        price: "GRATIS",
-        badge: "Paghi solo se guadagni",
-        description:
-            "Copia automaticamente le operazioni di Skitla13 e punta a risultati in modo passivo.",
-        trustLine:
-            "Skitla13 guadagna solo se guadagni anche tu (fee: 10% dei profitti).",
-        entryLine:
-            "Nessun costo di ingresso. Solo deposito minimo: 200€.",
-        benefits: [
-            "Copia automatica delle operazioni",
-            "Settaggi di rischio personalizzabili",
-            "Aggiornamenti operativi e gestione posizioni",
-            "Supporto onboarding per configurazione",
-            "Pausa / stop in qualsiasi momento",
-            "Accesso canale aggiornamenti essenziale",
+        "eyebrow": "SKITLA GOLD",
+        "title": "Scalping & Sniper",
+        "price": "Due sale",
+        "badge": "Copy trading FPG in arrivo",
+        "description": "Due approcci al Gold, una community da esplorare. Scopri SKITLA scalping XAU e SKITLA sniper XAU e scegli quali idee seguire secondo il tuo piano.",
+        "trustLine": "Le sale pubblicano segnali: oggi le operazioni sono eseguite da te. Il copy trading FPG non è ancora attivo.",
+        "entryLine": "Accesso privato: referral FPG, KYC e almeno 300€ o equivalente USD accreditati sul tuo conto.",
+        "benefits": [
+            "Due sale dedicate al Gold",
+            "Ingressi, target e stop nei setup",
+            "Aggiornamenti e riepiloghi delle idee",
+            "Richiesta tramite il bot ufficiale",
+            "Verifica manuale dei requisiti",
+            "Gestione del rischio complessivo tra le sale"
         ],
-        cta: "Attiva Copy Trading",
-        href: "https://t.me/m/l5WsLQ39ZTM0",
-        microcopy: "Richiede solo deposito minimo. Nessun abbonamento.",
+        "cta": "Scopri le sale Gold",
+        "href": "https://t.me/SkitlaSalaSegnaliBot?start=gold",
+        "microcopy": "Il deposito è capitale sul tuo conto, non una quota SKITLA. Possibili commissioni di affiliazione. Il trading comporta rischio."
     },
     {
-        eyebrow: "MEMBERSHIP",
-        title: "Premium Mensile",
-        price: "€247",
-        priceSuffix: "/ mese",
-        description:
-            "Non è un corso. Non è formazione base. Il valore è semplice: vedere cosa faccio e avere accesso diretto alla mia operatività.",
-        benefits: [
-            "Accesso ai miei segnali (crypto, indici, commodities)",
-            "Setup chiari con ingressi, target e gestione rischio",
-            "Aggiornamenti in tempo reale durante le fasi di mercato",
-            "Sessioni live e vocal room della mia operatività",
-            "Insight esclusivi sui movimenti e opportunità",
+        "eyebrow": "MEMBERSHIP",
+        "title": "Premium Mensile",
+        "price": "",
+        "description": "Accesso alla mia operatività e alla community: scopri contenuti, modalità e condizioni prima di aderire.",
+        "benefits": [
+            "Segnali su crypto, indici e commodities",
+            "Setup con ingressi, target e gestione del rischio",
+            "Aggiornamenti durante le fasi di mercato",
+            "Sessioni live e vocal room",
+            "Insight e confronto nella community"
         ],
-        cta: "Unisciti al Premium",
-        microcopy: "Accesso immediato a contenuti e community.",
-        // featured removed
+        "cta": "Richiedi informazioni",
+        "href": "https://t.me/SKITLAService",
+        "microcopy": "Contatta il supporto per disponibilità e condizioni."
     },
     {
-        eyebrow: "MEMBERSHIP",
-        title: "Premium Annual",
-        price: "€1.497",
-        priceSuffix: "/ anno",
-        badge: "Best value",
-        description:
-            "Formazione, supporto e community per tutto l'anno. Il piano più conveniente per chi vuole crescere con costanza.",
-        benefits: [
-            "Tutto il Premium Mensile incluso",
-            "Risparmio rispetto al piano mensile",
-            "Priorità nel supporto",
-            "Nuovi contenuti futuri inclusi",
-            "Accesso completo alla community",
+        "eyebrow": "MEMBERSHIP",
+        "title": "Premium Annual",
+        "price": "",
+        "description": "Un percorso annuale nella community SKITLA. Richiedi i dettagli del piano e valuta le condizioni prima di aderire.",
+        "benefits": [
+            "Contenuti del Premium Mensile",
+            "Percorso annuale nella community",
+            "Supporto dedicato",
+            "Aggiornamenti sui contenuti disponibili",
+            "Confronto con la community"
         ],
-        cta: "Unisciti al Premium Annual",
-        microcopy: "Fatturato annualmente. Accesso immediato.",
-        featured: true, // Gold featured card
-    },
+        "cta": "Scopri il piano annuale",
+        "href": "https://t.me/SKITLAService",
+        "microcopy": "Condizioni comunicate prima dell’adesione.",
+        "featured": true
+    }
 ];
 
 /* ──────────────────────────────────────────────
@@ -264,7 +257,7 @@ export function EliteAccess() {
                         transition={{ delay: 0.3, duration: 1 }}
                         className="text-white/40 text-sm md:text-base font-light leading-relaxed max-w-lg mx-auto mt-5"
                     >
-                        Scegli tra copy trading passivo gratuito o membership premium con formazione e supporto completo.
+                        Scopri le due sale Gold e le membership SKITLA. Il copy trading FPG è in arrivo.
                     </motion.p>
                 </div>
 
@@ -278,7 +271,7 @@ export function EliteAccess() {
                         transition={{ duration: 1 }}
                         className="w-full h-full lg:col-span-7 flex flex-col"
                     >
-                        <CopyTradingGraphic />
+                        <p className="text-center text-sm text-arcadia-gold mb-4">Copy trading FPG · In arrivo · Illustrazione del servizio futuro</p><CopyTradingGraphic />
                     </motion.div>
 
                     {/* Right: Copy Trading Card */}
@@ -339,7 +332,7 @@ export function EliteAccess() {
 
                                 {/* ── MIDDLE: Embedded Graphic ── */}
                                 <div className="w-full h-[240px] md:h-[340px] mb-3 z-10 border border-white/[0.05] rounded-[14px] bg-[#020202] overflow-hidden relative shadow-[inset_0_0_60px_rgba(0,0,0,0.8)]">
-                                    <CopyTradingGraphic isMobile />
+                                    <p className="text-center text-xs text-arcadia-gold mb-2">Copy trading FPG · In arrivo</p><CopyTradingGraphic isMobile />
                                 </div>
 
                                 {/* ── Description (below graphic on mobile) ── */}
@@ -434,3 +427,4 @@ export function EliteAccess() {
         </section>
     );
 }
+
