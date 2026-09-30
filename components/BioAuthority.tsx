@@ -41,7 +41,7 @@ export function BioAuthority() {
                         transition={{ delay: 0.3, duration: 1 }}
                         className="text-arcadia-gold/60 text-xs md:text-sm font-mono uppercase tracking-[0.3em] mb-4"
                     >
-                        Analista Ciclico • Trader • Founder Skitla13
+                        Trader • Founder Skitla13
                     </motion.p>
                     <motion.p
                         initial={{ opacity: 0, y: 10 }}
@@ -81,7 +81,7 @@ export function BioAuthority() {
                                 <div className="relative aspect-[3/2] overflow-hidden bg-zinc-950">
                                     <Image
                                         src="/skitla13_office.jpg"
-                                        alt="Marco Garavelli - Founder & Analyst"
+                                        alt="Marco Garavelli - Trader e Founder SKITLA13"
                                         fill
                                         className="object-cover object-center opacity-80 group-hover:opacity-100 transition-all duration-1000 group-hover:scale-[1.05]"
                                         sizes="(max-width: 768px) 100vw, 672px"
@@ -97,7 +97,7 @@ export function BioAuthority() {
                                             Skitla13
                                         </h4>
                                         <p className="text-[10px] text-white/30 uppercase tracking-[0.25em] mt-2 font-medium">
-                                            Analista Ciclico
+                                            Trader
                                         </p>
                                     </div>
                                     <div className="w-10 h-10 rounded-full border border-arcadia-gold/20 flex items-center justify-center bg-arcadia-gold/5">
@@ -162,7 +162,7 @@ export function BioAuthority() {
                                     </h3>
                                     <ul className="space-y-4">
                                         {[
-                                            "Sale Gold Scalping e Sniper · accesso tramite FPG.",
+                                            "Partnership: FPG, Exness, Bitunix, BingX e Bitget.",
                                             "Analisi Contrarian (BTC ATH $124.5k call).",
                                             "Caso Studio Documentato ($5k to >$300k) — pubblicato dal quotidiano Lo Jonio.",
                                             "Tracciabilità (Ecosistema + pubblicazioni)."
