@@ -400,7 +400,7 @@ export function EliteAccess() {
                         </h3>
                         <div className="max-w-2xl mx-auto space-y-4 text-white/50 text-[14px] md:text-[15px] leading-relaxed font-light tracking-[0.02em]">
                             <p>
-                                <span className="text-white/80 font-normal">Se sei qui, sai già il livello delle analisi e delle previsioni che porto ogni giorno sul mercato.</span> Dalla previsione del top di Bitcoin in area 124.500, fino all'individuazione del bottom in area 60.350, il valore è sempre stato uno: <strong className="text-liquid-gold font-normal italic">anticipare il mercato, non inseguirlo.</strong>
+                                <span className="text-white/80 font-normal">Prima di scegliere un percorso, guarda come lavoro.</span> Nell’archivio pubblico trovi analisi, posizioni e aggiornamenti: parti dai casi documentati e valuta <strong className="text-liquid-gold font-normal italic">le decisioni dietro i numeri.</strong>
                             </p>
                             <p>
                                 <span className="text-white/80 font-normal">ELITE nasce per questo.</span> È l'accesso diretto alla mia operatività. Un ambiente riservato a chi vuole stare dentro al flusso reale del mercato, con riferimenti chiari, senza distrazioni e senza contenuti inutili.

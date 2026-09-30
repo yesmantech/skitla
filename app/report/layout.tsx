@@ -13,11 +13,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Performance Report | Skitla13",
   description:
-    "Track record completo della sala segnali Skitla13. Equity curve, rendimenti mensili, statistiche avanzate e storico operazioni. Trasparenza totale.",
+    "Riepilogo delle operazioni registrate di SKITLA13: statistiche e storico. I risultati passati non garantiscono risultati futuri.",
   openGraph: {
     title: "Performance Report | Skitla13 Elite Trading",
     description:
-      "Il track record verificato della sala segnali più performante. Win rate 95%, +847% di profitto totale.",
+      "Esplora statistiche e storico delle operazioni registrate di SKITLA13. Il trading comporta rischio di perdita.",
     type: "website",
   },
 };

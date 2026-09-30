@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export function BioAuthority() {
     return (
-        <section id="bio" className="relative w-full py-16 lg:py-24 bg-black overflow-hidden">
+        <section id="founder" className="relative w-full py-16 lg:py-24 bg-black overflow-hidden">
             {/* ATMOSPHERIC BLOOMS (Institutional Depth) */}
             <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-arcadia-gold/5 blur-[120px] rounded-full pointer-events-none opacity-20" />
             <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 w-[600px] h-[600px] bg-arcadia-gold/[0.03] blur-[100px] rounded-full pointer-events-none opacity-15" />

@@ -46,8 +46,8 @@ export const metadata: Metadata = {
     default: "Skitla13 | Elite Trading Community",
     template: "%s | Skitla13",
   },
-  description: "Accedi all'ecosistema di trading più avanzato. Copia automaticamente le operazioni a mercato e punta a risultati passivi affidabili, con un win rate del 95%.",
-  keywords: ["trading community", "copy trading", "trading online", "elite trading", "Skitla13", "trading passivo", "criptovalute"],
+  description: "Scopri Marco Garavelli e SKITLA Gold: sale Scalping e Sniper, metodo, casi studio e condizioni di accesso. Il trading comporta rischio di perdita.",
+  keywords: ["SKITLA Gold", "Marco Garavelli", "trading oro", "Scalping XAU", "Sniper XAU", "Skitla13"],
   authors: [{ name: "Skitla13" }],
   creator: "Skitla13",
   publisher: "Skitla13",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     locale: "it_IT",
     url: "https://skitla13.com",
     title: "Skitla13 | Elite Trading Community",
-    description: "Accedi all'ecosistema di trading più avanzato. Copia automaticamente le operazioni a mercato e punta a risultati passivi affidabili.",
+    description: "Due sale Gold, un percorso da conoscere. Scopri metodo, casi studio e condizioni di accesso SKITLA.",
     siteName: "Skitla13",
     images: [
       {
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Skitla13 | Elite Trading Community",
-    description: "Accedi all'ecosistema di trading più avanzato. Copia automaticamente le operazioni a mercato e punta a risultati passivi affidabili.",
+    description: "Due sale Gold, un percorso da conoscere. Scopri metodo, casi studio e condizioni di accesso SKITLA.",
     images: ["/twitter-image.jpg"],
     creator: "@skitla13",
   },
@@ -96,7 +96,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
+    <html lang="it" className={`${inter.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
       <body className="antialiased bg-black text-white lg:cursor-none selection:bg-brand-primary selection:text-black">
         <CustomCursor />
         <NoiseOverlay />
