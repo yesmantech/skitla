@@ -95,8 +95,8 @@ export const CONTENT_A: CopyVariant = {
     },
     pricing: {
         planName: "Premium Mensile",
-        price: "247€",
-        period: "/anno",
+        price: "Su richiesta",
+        period: "",
         features: [
             "Tutti i Moduli Strategici",
             "Sessioni di Trading Live",
@@ -108,9 +108,9 @@ export const CONTENT_A: CopyVariant = {
         title: "Il Sistema Integrato",
         tagline: "Cosa Ottieni",
         features: [
-            { title: "Copytrading", subtitle: "Replica le operazioni dei nostri top trader in modo automatico." },
-            { title: "Analisi Giornaliera", subtitle: "Setup quotidiani e monitoraggio dei volumi istituzionali." },
-            { title: "Strategie Proprietary", subtitle: "Accesso ai protocolli operativi esclusivi di Skitla." },
+            { title: "Copy trading FPG · In arrivo", subtitle: "FPG Gold in arrivo: il servizio automatico non è ancora attivo." },
+            { title: "SKITLA scalping XAU", subtitle: "Idee sul Gold con ingressi, target, stop e aggiornamenti operativi." },
+            { title: "SKITLA sniper XAU", subtitle: "Un secondo approccio al Gold da seguire secondo il tuo piano di trading." },
             { title: "Hub Privato", subtitle: "Community Discord riservata per il confronto costante." },
             { title: "Sessioni Live", subtitle: "Trading in tempo reale con i nostri trader senior." },
             { title: "Supporto Prioritario", subtitle: "Assistenza dedicata per ogni tua esigenza operativa." }
@@ -119,11 +119,11 @@ export const CONTENT_A: CopyVariant = {
     proof: {
         title: "Numeri, non parole",
         stats: [
-            { value: "95%", label: "Win rate", helper: "Operazioni chiuse in profitto*" },
-            { value: "+600k", label: "Profitto 12 mesi", helper: "Periodo: ultimi 12 mesi" },
-            { value: "+5 Anni", label: "Storico tracciato", helper: "Track record documentato" }
+            { value: "$860,5k", label: "Netto calcolato", helper: "860.545,06 USD · Exness" },
+            { value: "$5,1 mld+", label: "Volume negoziato", helper: "5.116.344.767,42 USD" },
+            { value: "12.500", label: "Ordini chiusi", helper: "Tutti i conti · ultimi 365 giorni" }
         ],
-        footnote: "*Il trading comporta rischio. I risultati passati non garantiscono risultati futuri."
+        footnote: "Fonte: riepilogo Exness fornito dal titolare il 30 settembre 2026, tutti i conti, ultimi 365 giorni alla data del riepilogo. Netto calcolato: 1.313.698,49 USD di profitti − 356.789,69 USD di perdite − 96.363,74 USD di costi = 860.545,06 USD. Il volume non è profitto. Questi dati non rappresentano i risultati dei clienti delle sale Gold. I risultati passati non garantiscono risultati futuri."
     }
 };
 
@@ -157,8 +157,8 @@ export const CONTENT_B: CopyVariant = {
     },
     pricing: {
         planName: "Premium Mensile",
-        price: "247€",
-        period: "/anno",
+        price: "Su richiesta",
+        period: "",
         features: [
             "Libreria Completa Arcadia",
             "Sync di Mercato Live Quotidiani",
@@ -170,7 +170,7 @@ export const CONTENT_B: CopyVariant = {
         title: "Metodologia Arcadia",
         tagline: "High-Performance Trading System",
         features: [
-            { title: "Copytrading", subtitle: "Automazione professionale per replicare i flussi operativi d'elite." },
+            { title: "Copy trading FPG · In arrivo", subtitle: "FPG Gold in arrivo: il servizio automatico non è ancora attivo." },
             { title: "Analisi Istituzionale", subtitle: "Decodifica dei flussi di capitale dei grandi player." },
             { title: "Protocolli Arcadia", subtitle: "Sistemi di gestione del rischio di livello bancario." },
             { title: "Network d'Elite", subtitle: "Connessioni con trader professionisti internazionali." },
@@ -180,10 +180,10 @@ export const CONTENT_B: CopyVariant = {
     proof: {
         title: "Numeri, non parole",
         stats: [
-            { value: "95%", label: "Win rate", helper: "Operazioni chiuse in profitto*" },
-            { value: "+600k", label: "Profitto 12 mesi", helper: "Periodo: ultimi 12 mesi" },
-            { value: "+5 Anni", label: "Storico tracciato", helper: "Track record documentato" }
+            { value: "$860,5k", label: "Netto calcolato", helper: "860.545,06 USD · Exness" },
+            { value: "$5,1 mld+", label: "Volume negoziato", helper: "5.116.344.767,42 USD" },
+            { value: "12.500", label: "Ordini chiusi", helper: "Tutti i conti · ultimi 365 giorni" }
         ],
-        footnote: "*Il trading comporta rischio. I risultati passati non garantiscono risultati futuri."
+        footnote: "Fonte: riepilogo Exness fornito dal titolare il 30 settembre 2026, tutti i conti, ultimi 365 giorni alla data del riepilogo. Netto calcolato: 1.313.698,49 USD di profitti − 356.789,69 USD di perdite − 96.363,74 USD di costi = 860.545,06 USD. Il volume non è profitto. Questi dati non rappresentano i risultati dei clienti delle sale Gold. I risultati passati non garantiscono risultati futuri."
     }
 };
