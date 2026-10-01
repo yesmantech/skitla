@@ -13,6 +13,7 @@ interface SidebarProps {
 const menuItems = [
     { label: "Home", href: "#home" },
     { label: "Gold", href: "/gold/" },
+    { label: "Newsletter", href: "/newsletter/" },
     { label: "I Numeri", href: "#stats" },
     { label: "Il Founder", href: "#founder" },
     { label: "Ecosistema", href: "#ecosystem" },
@@ -55,7 +56,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                         animate={{ x: 0 }}
                         exit={{ x: "-100%" }}
                         transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                        className="fixed top-0 left-0 bottom-0 w-full max-w-[280px] bg-black/90 glass-obsidian border-r border-white/5 z-[70] p-6 md:p-8 flex flex-col"
+                        className="fixed top-0 left-0 bottom-0 w-full max-w-[280px] bg-black/90 glass-obsidian border-r border-white/5 z-[70] p-6 md:p-8 flex flex-col overflow-y-auto"
                     >
                         {/* Header */}
                         <div className="flex items-center justify-between mb-10">

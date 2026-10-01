@@ -1,0 +1,4 @@
+export const newsletterForms = {
+  it: "https://6968f521.sibforms.com/serve/MUIFANacu_yTFzjjoovPOkR9b2suO4R_APxFW91_r8Z6xyMG16zNwXJBBTTZQQ-1Gx2p1XZMWeqr-ArTPo_RrKzAslqVIoLgi8bDR5b6isVMoLxIGhtXf9NRD-l4Q6aCB6NgoDHjeYm46Lf1_PPhxFTjcQY5-kzmdIInQ7WS4MExQ0irl1214q2fai-QBoekexjwxAsiHPYQ_uLfVw==",
+  en: "https://6968f521.sibforms.com/serve/MUIFAF4Seq5qe9jEiXmDtP2NU9Aiq2838cQ9X-2YKg2fPafp05c6CdN8s6VvuNVwqTjsez3Gh-9IIkD8BlwiGHJhYhyzSWBbMvpon1IYLVNcFmKO4vE07MXtSSTyFvKb7DjiGvt3UIhMt4_CWG67veS22hWXA3A6aOLuClHd1EY1zVSGCZB1QrKXWl4coTmSmttOMy7KZWJvEXudLA=="
+};

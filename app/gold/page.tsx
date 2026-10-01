@@ -30,6 +30,11 @@ export default function GoldPage() {
         <p className="text-white/65 mb-5"><T text="La guida illustrata ti accompagna nell’accesso al tuo conto. Usa sempre il server e le credenziali forniti dal broker."/></p>
         <a href={language==='it'?'https://t.me/Skitla13Ufficiale/125':'https://t.me/Skitla13Ufficiale/127'} className="text-arcadia-gold underline underline-offset-4">{language==='it'?'Guida MT5 — Italiano':'MT5 Setup Guide — English'}</a>
       </section>
+      <section className="border-t border-white/15 py-10" dir="ltr">
+        <h2 className="font-serif text-3xl mb-5">{language === 'it' ? 'Il Gold, una volta a settimana.' : 'Gold, once a week.'}</h2>
+        <p className="text-white/70 mb-5">{language === 'it' ? 'Ricevi il mio benvenuto e i report delle sale via email. Gratis, in italiano o inglese. Puoi disiscriverti quando vuoi.' : 'Get my welcome email and the room reports. Free, in English or Italian. Unsubscribe whenever you like.'}</p>
+        <a href={`/newsletter/?lang=${language}&source=site_gold`} className="inline-block rounded-xl border border-arcadia-gold text-arcadia-gold px-6 py-4">{language === 'it' ? 'Scopri la newsletter' : 'Explore the newsletter'} →</a>
+      </section>
       <p className="text-sm text-white/60 leading-relaxed border-t border-white/15 pt-8"><T text="Il canale pubblico è gratuito. Le condizioni per le sale private e le informazioni sulle affiliazioni sono descritte nel percorso di accesso. Il copy trading FPG è in arrivo e non è ancora attivo."/></p>
     </div>
   </main><FAQ/><Footer/></>;

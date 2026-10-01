@@ -22,6 +22,7 @@ export function Footer() {
                     <div>
                         <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-6"> <T text={"Link Rapidi"} /> </h4>
                         <ul className="space-y-4 text-sm text-brand-text-muted font-light">
+                            <li><a href={`/newsletter/?lang=${language}`} className="text-arcadia-gold">Newsletter · IT / EN</a></li>
                             <li><a href={`/gold/?lang=${language}`} className="text-arcadia-gold">SKITLA Gold</a></li>
                             <li><a href={`/?lang=${language}#stats`} className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block duration-300"> <T text={"Performance"} /> </a></li>
                             <li><a href={`/?lang=${language}#ecosystem`} className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block duration-300"> <T text={"Strategie"} /> </a></li>
@@ -34,7 +35,7 @@ export function Footer() {
                         <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-6"> <T text={"Legale"} /> </h4>
                         <ul className="space-y-4 text-sm text-brand-text-muted font-light">
                             <li><span> <T text={"Termini e Condizioni — in aggiornamento"} /> </span></li>
-                            <li><span> <T text={"Privacy Policy — in aggiornamento"} /> </span></li>
+                            <li><a href={`/newsletter/privacy/?lang=${language}`} className="hover:text-arcadia-gold">{language === "it" ? "Privacy newsletter" : "Newsletter privacy"}</a></li>
                             <li><a href="#rischi" className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block duration-300"> <T text={"Dichiarazione sui Rischi"} /> </a></li>
                         </ul>
                     </div>

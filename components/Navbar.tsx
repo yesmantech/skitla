@@ -25,6 +25,7 @@ export function Navbar() {
             <a href={`/${suffix}#founder`}>{t("Il Founder")}</a>
             <a href={`/${suffix}#success`}>{t("Testimonianze")}</a>
             <a href={`/${suffix}#faq`}>FAQ</a>
+            <a href={`/newsletter/${suffix}`}>Newsletter</a>
           </nav>
         </div>
         <div className="flex items-center gap-3 md:gap-5">
