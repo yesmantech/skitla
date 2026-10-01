@@ -25,10 +25,11 @@ export const FAQS = [
     },
     {
         "question": "A cosa si riferiscono i numeri Exness?",
-        "answer": "Al riepilogo di tutti i conti fornito dal titolare il 30 settembre 2026, con filtro ultimi 365 giorni. Il netto è calcolato sottraendo perdite e costi dai profitti mostrati. Il volume misura il valore negoziato, non il guadagno. Non sono risultati dei clienti delle sale Gold."
+        "answer": "Ai miei conti Exness, nel riepilogo del 30 settembre 2026 con filtro ultimi 365 giorni. Ho ricavato il risultato netto sottraendo perdite e costi dai profitti indicati. Il volume misura il valore delle operazioni negoziate. Questi numeri descrivono la mia attività personale."
     },
     {
         "question": "Come contatto il supporto?",
         "answer": "Su Telegram: @SKITLAService oppure @Skitla13Fx_Real. Verifica sempre il nome utente completo: i contatti ufficiali non ti scrivono per primi. Per le condizioni di rinnovo, annullamento o rimborso della tua membership chiedi al supporto prima di aderire."
     }
 ];
+

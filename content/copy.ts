@@ -119,11 +119,11 @@ export const CONTENT_A: CopyVariant = {
     proof: {
         title: "Numeri, non parole",
         stats: [
-            { value: "$860,5k", label: "Netto calcolato", helper: "860.545,06 USD · Exness" },
+            { value: "$860,5k", label: "Il mio risultato netto", helper: "860.545,06 USD · Exness" },
             { value: "$5,1 mld+", label: "Volume negoziato", helper: "5.116.344.767,42 USD" },
             { value: "12.500", label: "Ordini chiusi", helper: "Tutti i conti · ultimi 365 giorni" }
         ],
-        footnote: "Fonte: riepilogo Exness fornito dal titolare il 30 settembre 2026, tutti i conti, ultimi 365 giorni alla data del riepilogo. Netto calcolato: 1.313.698,49 USD di profitti − 356.789,69 USD di perdite − 96.363,74 USD di costi = 860.545,06 USD. Il volume non è profitto. Questi dati non rappresentano i risultati dei clienti delle sale Gold. I risultati passati non garantiscono risultati futuri."
+        footnote: "Questi sono i risultati dei miei conti Exness nei 365 giorni precedenti al 30 settembre 2026: 860.545,06 USD al netto di perdite e costi, oltre 5,1 miliardi di USD di volume negoziato e 12.500 ordini chiusi. Fonte: il mio riepilogo Exness. Sono risultati personali; i risultati passati non garantiscono quelli futuri."
     }
 };
 
@@ -180,10 +180,11 @@ export const CONTENT_B: CopyVariant = {
     proof: {
         title: "Numeri, non parole",
         stats: [
-            { value: "$860,5k", label: "Netto calcolato", helper: "860.545,06 USD · Exness" },
+            { value: "$860,5k", label: "Il mio risultato netto", helper: "860.545,06 USD · Exness" },
             { value: "$5,1 mld+", label: "Volume negoziato", helper: "5.116.344.767,42 USD" },
             { value: "12.500", label: "Ordini chiusi", helper: "Tutti i conti · ultimi 365 giorni" }
         ],
-        footnote: "Fonte: riepilogo Exness fornito dal titolare il 30 settembre 2026, tutti i conti, ultimi 365 giorni alla data del riepilogo. Netto calcolato: 1.313.698,49 USD di profitti − 356.789,69 USD di perdite − 96.363,74 USD di costi = 860.545,06 USD. Il volume non è profitto. Questi dati non rappresentano i risultati dei clienti delle sale Gold. I risultati passati non garantiscono risultati futuri."
+        footnote: "Questi sono i risultati dei miei conti Exness nei 365 giorni precedenti al 30 settembre 2026: 860.545,06 USD al netto di perdite e costi, oltre 5,1 miliardi di USD di volume negoziato e 12.500 ordini chiusi. Fonte: il mio riepilogo Exness. Sono risultati personali; i risultati passati non garantiscono quelli futuri."
     }
 };
+
