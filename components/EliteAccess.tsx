@@ -1,6 +1,6 @@
 
 "use client";
-import { T } from "@/components/LanguageProvider";
+import { T, useLanguage } from "@/components/LanguageProvider";
 
 import { motion } from "framer-motion";
 import { Container } from "./ui/Container";
@@ -90,6 +90,7 @@ const cards: PricingCard[] = [
    ────────────────────────────────────────────── */
 
 export function EliteAccess() {
+    const { language } = useLanguage();
     const copyTradingCard = cards[0];
     const membershipCards = cards.slice(1);
 
@@ -207,7 +208,7 @@ export function EliteAccess() {
                     <div className="w-full flex justify-center">
                         <HeroCTA
                             label={card.cta}
-                            href={card.href}
+                            href={card.href?.includes('?start=gold')?`https://t.me/SkitlaSalaSegnaliBot?start=gold_v1_site_home_${language}`:card.href}
                             className="w-full max-w-[280px]"
                             interactive={false}
                         />

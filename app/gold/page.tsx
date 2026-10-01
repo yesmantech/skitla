@@ -23,12 +23,12 @@ export default function GoldPage() {
         <p className="text-2xl"><T text="12 idee operative · 3 stop"/></p>
         <p dir="ltr" className="my-3">TP1: 9 · TP2: 8 · TP3: 2 · TP4: 2</p>
         <p className="text-white/65 max-w-2xl leading-relaxed"><T text="I target parziali si riferiscono alle stesse idee, non a operazioni aggiuntive. Fonte: riepilogo giornaliero della sala Scalping."/></p>
-        <a href="https://t.me/SkitlaSalaSegnaliBot?start=gold_reports" className="inline-block mt-5 text-arcadia-gold underline underline-offset-4"><T text="Leggi i report Gold originali"/> →</a>
+        <a href={`https://t.me/SkitlaSalaSegnaliBot?start=gold_v1_site_reports_${language}`} className="inline-block mt-5 text-arcadia-gold underline underline-offset-4"><T text="Leggi i report Gold originali"/> →</a>
       </section>
       <section className="border-t border-white/15 py-10">
         <h2 className="font-serif text-3xl mb-5"><T text="Inizia con MT5"/></h2>
         <p className="text-white/65 mb-5"><T text="La guida illustrata ti accompagna nell’accesso al tuo conto. Usa sempre il server e le credenziali forniti dal broker."/></p>
-        <a href="https://t.me/Skitla13Ufficiale/127" className="text-arcadia-gold underline underline-offset-4">MT5 Setup Guide — English</a>
+        <a href={language==='it'?'https://t.me/Skitla13Ufficiale/125':'https://t.me/Skitla13Ufficiale/127'} className="text-arcadia-gold underline underline-offset-4">{language==='it'?'Guida MT5 — Italiano':'MT5 Setup Guide — English'}</a>
       </section>
       <p className="text-sm text-white/60 leading-relaxed border-t border-white/15 pt-8"><T text="Il canale pubblico è gratuito. Le condizioni per le sale private e le informazioni sulle affiliazioni sono descritte nel percorso di accesso. Il copy trading FPG è in arrivo e non è ancora attivo."/></p>
     </div>
