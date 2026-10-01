@@ -1,8 +1,10 @@
 "use client";
+import { T, useLanguage } from "@/components/LanguageProvider";
 
 import { Container } from "./ui/Container";
 
 export function Footer() {
+    const { language } = useLanguage();
     return (
         <footer className="py-20 border-t border-white/5 bg-black relative">
             {/* Background Gradient Mesh */}
@@ -12,35 +14,34 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 relative z-10">
                     <div className="md:col-span-2">
                         <div className="text-2xl font-black italic tracking-tighter mb-6 text-arcadia-gold uppercase">
-                            Skitla
-                        </div>
+                             <T text={"Skitla"} /> </div>
                         <p className="text-brand-text-muted text-sm leading-relaxed max-w-xs font-light">
-                            L&apos;hub definitivo per trader che cercano l&apos;eccellenza attraverso la logica istituzionale e la community.
-                        </p>
+                             <T text={"L'hub definitivo per trader che cercano l'eccellenza attraverso la logica istituzionale e la community."} /> </p>
                     </div>
 
                     <div>
-                        <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-6">Link Rapidi</h4>
+                        <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-6"> <T text={"Link Rapidi"} /> </h4>
                         <ul className="space-y-4 text-sm text-brand-text-muted font-light">
-                            <li><a href="#stats" className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block duration-300">Performance</a></li>
-                            <li><a href="#ecosystem" className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block duration-300">Strategie</a></li>
-                            <li><a href="#faq" className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block duration-300">FAQ</a></li>
-                            <li><a href="https://t.me/SKITLAService" className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block duration-300">Supporto</a></li>
+                            <li><a href={`/gold/?lang=${language}`} className="text-arcadia-gold">SKITLA Gold</a></li>
+                            <li><a href={`/?lang=${language}#stats`} className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block duration-300"> <T text={"Performance"} /> </a></li>
+                            <li><a href={`/?lang=${language}#ecosystem`} className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block duration-300"> <T text={"Strategie"} /> </a></li>
+                            <li><a href={`/?lang=${language}#faq`} className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block duration-300"> <T text={"FAQ"} /> </a></li>
+                            <li><a href="https://t.me/SKITLAService" className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block duration-300"> <T text={"Supporto"} /> </a></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-6">Legale</h4>
+                        <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-6"> <T text={"Legale"} /> </h4>
                         <ul className="space-y-4 text-sm text-brand-text-muted font-light">
-                            <li><span>Termini e Condizioni — in aggiornamento</span></li>
-                            <li><span>Privacy Policy — in aggiornamento</span></li>
-                            <li><a href="#rischi" className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block duration-300">Dichiarazione sui Rischi</a></li>
+                            <li><span> <T text={"Termini e Condizioni — in aggiornamento"} /> </span></li>
+                            <li><span> <T text={"Privacy Policy — in aggiornamento"} /> </span></li>
+                            <li><a href="#rischi" className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block duration-300"> <T text={"Dichiarazione sui Rischi"} /> </a></li>
                         </ul>
                     </div>
                 </div>
 
                 <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] text-brand-text-muted uppercase tracking-[0.2em]">
-                    <p>© {new Date().getFullYear()} Skitla. Tutti i diritti riservati.</p>
+                    <p> <T text={"©"} /> {new Date().getFullYear()}  <T text={"Skitla. Tutti i diritti riservati."} /> </p>
                     <div className="flex items-center gap-5">
                         {/* YouTube */}
                         <a href="https://youtube.com/@skitla1377" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-arcadia-gold transition-all duration-300 hover:scale-110" aria-label="YouTube">
@@ -62,11 +63,9 @@ export function Footer() {
                 </div>
 
                 <div id="rischi" className="mt-12 text-xs text-brand-text-muted text-center leading-relaxed uppercase tracking-tighter max-w-5xl mx-auto pt-8">
-                    DISCLOSURE: Il trading sul margine comporta un alto livello di rischio e potrebbe non essere adatto a tutti gli investitori.
-                    L&apos;elevato grado di leva finanziaria può operare sia a tuo favore che contro di te.
-                    Prima di decidere di investire, dovresti considerare attentamente i tuoi obiettivi di investimento, il livello di esperienza e l&apos;appetito per il rischio.
-                </div>
+                     <T text={"DISCLOSURE: Il trading sul margine comporta un alto livello di rischio e potrebbe non essere adatto a tutti gli investitori. L'elevato grado di leva finanziaria può operare sia a tuo favore che contro di te. Prima di decidere di investire, dovresti considerare attentamente i tuoi obiettivi di investimento, il livello di esperienza e l'appetito per il rischio."} /> </div>
             </Container>
         </footer>
     );
 }
+

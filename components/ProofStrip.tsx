@@ -1,4 +1,5 @@
 "use client";
+import { T } from "@/components/LanguageProvider";
 
 import { motion } from "framer-motion";
 import { CopyVariant } from "@/content/copy";
@@ -22,8 +23,7 @@ export function ProofStrip({ content }: { content: CopyVariant["proof"] }) {
                             transition={{ duration: 1.5 }}
                             className="text-[10px] md:text-xs font-mono text-arcadia-gold uppercase mb-5"
                         >
-                            TRACK RECORD
-                        </motion.div>
+                             <T text={"TRACK RECORD"} /> </motion.div>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -31,7 +31,7 @@ export function ProofStrip({ content }: { content: CopyVariant["proof"] }) {
                             transition={{ duration: 0.8 }}
                             className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-medium leading-[1.1] md:leading-[1.1] tracking-tight text-liquid-silver pb-4"
                         >
-                            {content.title}
+                            <T text={content.title} />
                         </motion.h2>
                         <div className="w-24 h-[1px] bg-arcadia-gold/30 mx-auto mt-8 md:mt-10" />
                     </div>
@@ -68,7 +68,7 @@ export function ProofStrip({ content }: { content: CopyVariant["proof"] }) {
                                         {/* LARGE METRIC VALUE: Balanced for presence */}
                                         <div className={`font-bold text-liquid-gold mb-2 md:mb-8 tracking-tighter whitespace-nowrap drop-shadow-[0_0_30px_rgba(217,177,98,0.2)] ${i === 0 ? "text-4xl sm:text-5xl lg:text-6xl mb-4" : "text-2xl sm:text-3xl lg:text-5xl"
                                             }`}>
-                                            {stat.value}
+                                            <T text={stat.value} />
                                         </div>
 
                                         {/* LABEL: Maximized for extreme presence per user request */}
@@ -76,14 +76,14 @@ export function ProofStrip({ content }: { content: CopyVariant["proof"] }) {
                                             ? "text-base sm:text-lg md:text-3xl tracking-[0.2em] md:tracking-[0.3em] mb-6"
                                             : "text-xs sm:text-sm md:text-3xl tracking-[0.15em] md:tracking-[0.3em]"
                                             }`}>
-                                            {stat.label}
+                                            <T text={stat.label} />
                                         </div>
 
                                         {/* HELPER TEXT: Subtle anchor */}
                                         <div className="mt-auto">
                                             <p className={`text-white/40 font-light leading-relaxed tracking-wide ${i === 0 ? "text-xs md:text-sm max-w-[200px] md:max-w-none" : "text-[10px] md:text-sm hidden sm:block"
                                                 }`}>
-                                                {stat.helper}
+                                                <T text={stat.helper} />
                                             </p>
                                         </div>
                                     </div>
@@ -94,7 +94,7 @@ export function ProofStrip({ content }: { content: CopyVariant["proof"] }) {
 
 
                 </div>
-                <p className="mt-8 text-sm text-white/60 leading-relaxed max-w-4xl mx-auto">{content.footnote}</p>
+                <p className="mt-8 text-sm text-white/60 leading-relaxed max-w-4xl mx-auto"><T text={content.footnote} /></p>
             </Container>
         </section>
     );

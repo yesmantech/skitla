@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight } from "lucide-react";
 import Magnetic from "./ui/Magnetic";
+import { useLanguage } from "./LanguageProvider";
 
 interface SidebarProps {
     isOpen: boolean;
@@ -11,6 +12,7 @@ interface SidebarProps {
 
 const menuItems = [
     { label: "Home", href: "#home" },
+    { label: "Gold", href: "/gold/" },
     { label: "I Numeri", href: "#stats" },
     { label: "Il Founder", href: "#founder" },
     { label: "Ecosistema", href: "#ecosystem" },
@@ -22,9 +24,11 @@ const menuItems = [
 ];
 
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
+    const { t, language } = useLanguage();
     const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-        e.preventDefault();
         onClose();
+        if (!href.startsWith("#") || window.location.pathname !== "/") return;
+        e.preventDefault();
         const element = document.querySelector(href);
         if (element) {
             const top = element.getBoundingClientRect().top + window.scrollY - 80;
@@ -57,6 +61,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                         <div className="flex items-center justify-between mb-10">
                             <span className="font-serif text-xl text-arcadia-gold italic">Skitla</span>
                             <button
+                                aria-label={t("Chiudi menu")}
                                 onClick={onClose}
                                 className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors group"
                             >
@@ -74,12 +79,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                                     transition={{ delay: i * 0.05 + 0.1 }}
                                 >
                                     <a
-                                        href={item.href}
+                                        href={item.href.startsWith("#") ? `/?lang=${language}${item.href}` : `${item.href}?lang=${language}`}
                                         onClick={(e) => handleLinkClick(e, item.href)}
                                         className="group flex items-center justify-between py-2 border-b border-white/[0.03] hover:border-arcadia-gold/40 transition-colors"
                                     >
                                         <span className="text-base text-white/50 group-hover:text-arcadia-gold transition-colors font-medium tracking-wide">
-                                            {item.label}
+                                            {t(item.label)}
                                         </span>
                                         <ArrowRight className="w-3.5 h-3.5 text-arcadia-gold opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
                                     </a>

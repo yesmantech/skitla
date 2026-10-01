@@ -1,4 +1,5 @@
 "use client";
+import { T } from "@/components/LanguageProvider";
 
 import { useState, useEffect } from "react";
 
@@ -36,21 +37,20 @@ export function Hero({ content }: { content: CopyVariant["hero"] }) {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                         >
-                            Domina il mercato
-                        </motion.span>
+                             <T text={"Domina il mercato"} /> </motion.span>
                         <motion.span
                             className="block mt-0 md:mt-2"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                         >
-                            <span className="text-liquid-silver inline-block mr-3 md:mr-4">con</span>
-                            <span className="text-liquid-gold italic font-serif inline-block pr-[0.2em]">Skitla</span>
+                            <span className="text-liquid-silver inline-block mr-3 md:mr-4"> <T text={"con"} /> </span>
+                            <span className="text-liquid-gold italic font-serif inline-block pr-[0.2em]"> <T text={"Skitla"} /> </span>
                         </motion.span>
                     </h1>
 
                     <p className="text-base sm:text-lg md:text-xl text-white/40 max-w-lg leading-relaxed font-light px-4 lg:px-0 mb-8 lg:mb-10">
-                        {content.subheadline}
+                        <T text={content.subheadline} />
                     </p>
 
                     {/* CTA BUTTON — TIER S (DESKTOP ONLY) */}

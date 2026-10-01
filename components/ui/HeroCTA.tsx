@@ -1,4 +1,5 @@
 "use client";
+import { T } from "@/components/LanguageProvider";
 
 import { motion } from "framer-motion";
 import Magnetic from "./Magnetic";
@@ -45,7 +46,7 @@ export function HeroCTA({
 
                 {/* Text */}
                 <span className="hero-cta-text">
-                    {label}
+                    <T text={label} />
                 </span>
 
                 {/* Arrow */}

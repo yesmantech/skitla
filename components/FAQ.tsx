@@ -1,4 +1,5 @@
 "use client";
+import { T } from "@/components/LanguageProvider";
 
 import { Container } from "./ui/Container";
 import { motion, AnimatePresence } from "framer-motion";
@@ -33,8 +34,7 @@ export function FAQ() {
                         transition={{ duration: 1.5 }}
                         className="text-[9px] md:text-xs font-mono text-arcadia-gold uppercase mb-5"
                     >
-                        FAQ
-                    </motion.div>
+                         <T text={"FAQ"} /> </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -42,8 +42,7 @@ export function FAQ() {
                         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                         className="text-5xl md:text-8xl font-serif text-liquid-silver tracking-tighter leading-[1.1] pb-2"
                     >
-                        Domande Frequenti
-                    </motion.h2>
+                         <T text={"Domande Frequenti"} /> </motion.h2>
                     <motion.p
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
@@ -51,8 +50,7 @@ export function FAQ() {
                         transition={{ delay: 0.3, duration: 1 }}
                         className="text-white/30 text-sm md:text-base font-light leading-relaxed max-w-md mx-auto mt-5"
                     >
-                        Tutto quello che devi sapere prima di unirti.
-                    </motion.p>
+                         <T text={"Tutto quello che devi sapere prima di unirti."} /> </motion.p>
                 </div>
 
                 {/* ── ACCORDION — Unified clean design for mobile & desktop ── */}
@@ -100,7 +98,7 @@ export function FAQ() {
                                             }
                                         `}
                                     >
-                                        {faq.question}
+                                        <T text={faq.question} />
                                     </span>
 
                                     {/* Toggle icon — circular with subtle border */}
@@ -147,7 +145,7 @@ export function FAQ() {
                                             {/* Answer content — offset to align with question text */}
                                             <div className="pb-6 pl-[calc(1.5rem+16px+1rem)] md:pl-[calc(1.75rem+20px+1.25rem)] pr-12 md:pr-16">
                                                 <p className="text-[13px] md:text-[14px] text-white/35 leading-[1.8] font-light tracking-[0.02em]">
-                                                    {faq.answer}
+                                                    <T text={faq.answer} />
                                                 </p>
                                             </div>
                                         </motion.div>

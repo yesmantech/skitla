@@ -1,4 +1,5 @@
 "use client";
+import { T } from "@/components/LanguageProvider";
 
 import React from "react";
 import { motion } from "framer-motion";
@@ -43,14 +44,12 @@ export function SuccessStories() {
                         transition={{ duration: 1.5 }}
                         className="text-[9px] md:text-xs font-mono text-arcadia-gold uppercase mb-5"
                     >
-                        Wall of Success
-                    </motion.div>
+                         <T text={"Wall of Success"} /> </motion.div>
                     <h2 className="text-5xl md:text-8xl font-serif text-liquid-silver tracking-tighter leading-[1.1] mb-8 pb-4">
-                        Risultati <span className="text-liquid-gold">Reali</span>
+                         <T text={"Risultati"} /> <span className="text-liquid-gold"> <T text={"Reali"} /> </span>
                     </h2>
                     <p className="max-w-2xl mx-auto text-white/40 text-lg md:text-xl font-light tracking-wide">
-                        Risultati reali, community reale. Guarda cosa dicono i nostri membri su Skitla.
-                    </p>
+                         <T text={"Risultati reali, community reale. Guarda cosa dicono i nostri membri su Skitla."} /> </p>
                 </motion.div>
             </div>
 

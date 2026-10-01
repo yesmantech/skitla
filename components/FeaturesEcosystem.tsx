@@ -1,4 +1,5 @@
 "use client";
+import { T } from "@/components/LanguageProvider";
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import {
@@ -81,7 +82,7 @@ export function FeaturesEcosystem({ content }: { content: CopyVariant["ecosystem
                         transition={{ duration: 1.5 }}
                         className="text-[9px] md:text-xs font-mono text-arcadia-gold uppercase mb-5"
                     >
-                        {content.tagline}
+                        <T text={content.tagline} />
                     </motion.div>
                     <motion.h3
                         initial={{ opacity: 0, y: 30 }}
@@ -90,7 +91,7 @@ export function FeaturesEcosystem({ content }: { content: CopyVariant["ecosystem
                         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                         className="text-5xl lg:text-8xl font-serif text-liquid-silver tracking-tighter leading-[1.1] pb-4"
                     >
-                        {content.title}
+                        <T text={content.title} />
                     </motion.h3>
                 </motion.div>
 
@@ -135,7 +136,7 @@ export function FeaturesEcosystem({ content }: { content: CopyVariant["ecosystem
                                         {/* TYPOGRAPHY: LIQUID GOLD TIER S */}
                                         <div className="flex flex-col">
                                             <h4 className="text-[10px] md:text-[16px] font-bold text-liquid-gold tracking-[0.15em] md:tracking-[0.25em] uppercase leading-tight">
-                                                {feature.title}
+                                                <T text={feature.title} />
                                             </h4>
                                             <div className="w-12 h-[1px] bg-gradient-to-r from-arcadia-gold/60 to-transparent mt-4 transition-all duration-700 group-hover:w-24 group-hover:from-arcadia-gold" />
                                         </div>
@@ -148,7 +149,7 @@ export function FeaturesEcosystem({ content }: { content: CopyVariant["ecosystem
 
                                     {/* SUBTITLE: RAW ELEGANCE (Sophisticated Contrast) */}
                                     <p className="text-[10px] md:text-[14px] text-white/40 leading-relaxed font-light tracking-[0.06em] group-hover:text-white/80 transition-colors duration-700">
-                                        {feature.subtitle}
+                                        <T text={feature.subtitle} />
                                     </p>
 
                                     {/* INTERNAL REFLECTION GLINT (Macro Shine) */}

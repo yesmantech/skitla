@@ -27,6 +27,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import Preloader from "@/components/ui/Preloader";
+import { LanguageProvider } from "@/components/LanguageProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -98,12 +99,14 @@ export default function RootLayout({
   return (
     <html lang="it" className={`${inter.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
       <body className="antialiased bg-black text-white lg:cursor-none selection:bg-brand-primary selection:text-black">
+        <LanguageProvider>
         <CustomCursor />
         <NoiseOverlay />
         <Preloader />
         <SmoothScroll>
           {children}
         </SmoothScroll>
+        </LanguageProvider>
       </body>
     </html>
   );

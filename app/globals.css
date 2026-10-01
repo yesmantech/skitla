@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+html[lang="ar"] body { font-family: Tahoma, Arial, sans-serif; }
+html[lang="ar"] [class*="tracking-"] { letter-spacing: normal !important; }
+html[lang="ar"] .text-left { text-align: right; }
+html[lang="ar"] .lg\:text-left { text-align: right; }
+html[lang="zh"] [class*="tracking-"] { letter-spacing: normal !important; }
+html[lang="ar"] #stats .font-bold,
+html[lang="ar"] #stats .mt-auto { unicode-bidi: plaintext; }
+select { max-width: 130px; }
+
 @theme {
   /* Colors - Hyper-Fidelity Arcadia Extraction */
   --color-brand-primary: #D9B162;

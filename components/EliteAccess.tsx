@@ -1,5 +1,6 @@
 
 "use client";
+import { T } from "@/components/LanguageProvider";
 
 import { motion } from "framer-motion";
 import { Container } from "./ui/Container";
@@ -131,12 +132,12 @@ export function EliteAccess() {
 
                     {/* Eyebrow */}
                     <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.4em] text-arcadia-gold/40 mb-4 font-mono">
-                        {card.eyebrow}
+                        <T text={card.eyebrow} />
                     </span>
 
                     {/* Title */}
                     <h3 className="text-xl md:text-2xl font-serif text-liquid-silver tracking-tight pb-1 mb-3 md:mb-5 group-hover:text-white transition-colors duration-500">
-                        {card.title}
+                        <T text={card.title} />
                     </h3>
 
                     {/* Price block */}
@@ -147,11 +148,11 @@ export function EliteAccess() {
                                 : "text-liquid-silver"
                                 }`}
                         >
-                            {card.price}
+                            <T text={card.price} />
                         </span>
                         {card.priceSuffix && (
                             <span className="text-white/25 text-xs uppercase tracking-widest font-light font-mono">
-                                {card.priceSuffix}
+                                <T text={card.priceSuffix} />
                             </span>
                         )}
                     </div>
@@ -160,27 +161,27 @@ export function EliteAccess() {
                     {card.badge && (
                         <div className="inline-flex self-start mb-5">
                             <span className="text-[9px] uppercase tracking-[0.25em] font-medium text-arcadia-gold bg-arcadia-gold/10 border border-arcadia-gold/20 rounded-full px-3 py-1 font-mono">
-                                {card.badge}
+                                <T text={card.badge} />
                             </span>
                         </div>
                     )}
 
                     {/* Description */}
                     <p className="text-[13px] md:text-[14px] text-white/40 leading-relaxed font-light tracking-[0.04em] mb-5">
-                        {card.description}
+                        <T text={card.description} />
                     </p>
 
                     {/* Trust line */}
                     {card.trustLine && (
                         <p className="text-arcadia-gold/50 text-[12px] leading-relaxed font-light mb-2 italic tracking-[0.04em]">
-                            {card.trustLine}
+                            <T text={card.trustLine} />
                         </p>
                     )}
 
                     {/* Entry requirement */}
                     {card.entryLine && (
                         <p className="text-white/25 text-[12px] leading-relaxed font-light mb-5 tracking-[0.04em]">
-                            {card.entryLine}
+                            <T text={card.entryLine} />
                         </p>
                     )}
 
@@ -197,7 +198,7 @@ export function EliteAccess() {
                                 <div className="w-4 h-4 rounded-full border border-arcadia-gold/30 flex items-center justify-center flex-shrink-0 mt-0.5">
                                     <Check className="w-2.5 h-2.5 icon-gold" strokeWidth={2.5} />
                                 </div>
-                                <span>{b}</span>
+                                <span><T text={b} /></span>
                             </li>
                         ))}
                     </ul>
@@ -214,7 +215,7 @@ export function EliteAccess() {
 
                     {/* Microcopy */}
                     <p className="text-center text-[10px] text-white/20 mt-3 font-light tracking-[0.04em]">
-                        {card.microcopy}
+                        <T text={card.microcopy} />
                     </p>
 
                     {/* INTERNAL REFLECTION GLINT (Tier S Shimmer) */}
@@ -239,8 +240,7 @@ export function EliteAccess() {
                         transition={{ duration: 1.5 }}
                         className="text-[9px] md:text-xs font-mono text-arcadia-gold uppercase mb-5"
                     >
-                        Ecosistema
-                    </motion.div>
+                         <T text={"Ecosistema"} /> </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -248,7 +248,7 @@ export function EliteAccess() {
                         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                         className="text-5xl md:text-8xl font-serif text-liquid-silver tracking-tighter leading-[1.1] pb-2"
                     >
-                        Elite <span className="text-liquid-gold italic">Access</span>
+                         <T text={"Elite"} /> <span className="text-liquid-gold italic"> <T text={"Access"} /> </span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0 }}
@@ -257,8 +257,7 @@ export function EliteAccess() {
                         transition={{ delay: 0.3, duration: 1 }}
                         className="text-white/40 text-sm md:text-base font-light leading-relaxed max-w-lg mx-auto mt-5"
                     >
-                        Scopri le due sale Gold e le membership SKITLA. Il copy trading FPG è in arrivo.
-                    </motion.p>
+                         <T text={"Scopri le due sale Gold e le membership SKITLA. Il copy trading FPG è in arrivo."} /> </motion.p>
                 </div>
 
                 {/* ── DESKTOP / TABLET (lg+): Side-by-side ── */}
@@ -271,7 +270,7 @@ export function EliteAccess() {
                         transition={{ duration: 1 }}
                         className="w-full h-full lg:col-span-7 flex flex-col"
                     >
-                        <p className="text-center text-sm text-arcadia-gold mb-4">Copy trading FPG · In arrivo · Illustrazione del servizio futuro</p><CopyTradingGraphic />
+                        <p className="text-center text-sm text-arcadia-gold mb-4"> <T text={"Copy trading FPG · In arrivo · Illustrazione del servizio futuro"} /> </p><CopyTradingGraphic />
                     </motion.div>
 
                     {/* Right: Copy Trading Card */}
@@ -311,20 +310,20 @@ export function EliteAccess() {
                                 {/* ── TOP: Card info ── */}
                                 <div className="z-10 w-full mb-2">
                                     <span className="block text-[9px] font-bold uppercase tracking-[0.4em] text-arcadia-gold/40 mb-3 font-mono">
-                                        {copyTradingCard.eyebrow}
+                                        <T text={copyTradingCard.eyebrow} />
                                     </span>
                                     <h3 className="text-xl font-serif text-liquid-silver tracking-tight pb-1 mb-2 group-hover:text-white transition-colors duration-500">
-                                        {copyTradingCard.title}
+                                        <T text={copyTradingCard.title} />
                                     </h3>
                                     <div className="flex items-baseline gap-2 mb-2">
                                         <span className="text-5xl font-light tracking-tight text-liquid-silver">
-                                            {copyTradingCard.price}
+                                            <T text={copyTradingCard.price} />
                                         </span>
                                     </div>
                                     {copyTradingCard.badge && (
                                         <div className="inline-flex">
                                             <span className="text-[9px] uppercase tracking-[0.25em] font-medium text-arcadia-gold bg-arcadia-gold/10 border border-arcadia-gold/20 rounded-full px-3 py-1 font-mono">
-                                                {copyTradingCard.badge}
+                                                <T text={copyTradingCard.badge} />
                                             </span>
                                         </div>
                                     )}
@@ -332,22 +331,22 @@ export function EliteAccess() {
 
                                 {/* ── MIDDLE: Embedded Graphic ── */}
                                 <div className="w-full h-[240px] md:h-[340px] mb-3 z-10 border border-white/[0.05] rounded-[14px] bg-[#020202] overflow-hidden relative shadow-[inset_0_0_60px_rgba(0,0,0,0.8)]">
-                                    <p className="text-center text-xs text-arcadia-gold mb-2">Copy trading FPG · In arrivo</p><CopyTradingGraphic isMobile />
+                                    <p className="text-center text-xs text-arcadia-gold mb-2"> <T text={"Copy trading FPG · In arrivo"} /> </p><CopyTradingGraphic isMobile />
                                 </div>
 
                                 {/* ── Description (below graphic on mobile) ── */}
                                 <div className="z-10 w-full mb-3">
                                     <p className="text-[13px] text-white/40 leading-relaxed font-light tracking-[0.04em]">
-                                        {copyTradingCard.description}
+                                        <T text={copyTradingCard.description} />
                                     </p>
                                     {copyTradingCard.trustLine && (
                                         <p className="text-arcadia-gold/50 text-[12px] leading-relaxed font-light mt-2 mb-1 italic tracking-[0.04em]">
-                                            {copyTradingCard.trustLine}
+                                            <T text={copyTradingCard.trustLine} />
                                         </p>
                                     )}
                                     {copyTradingCard.entryLine && (
                                         <p className="text-white/25 text-[12px] leading-relaxed font-light tracking-[0.04em]">
-                                            {copyTradingCard.entryLine}
+                                            <T text={copyTradingCard.entryLine} />
                                         </p>
                                     )}
                                 </div>
@@ -364,7 +363,7 @@ export function EliteAccess() {
                                                 <div className="w-4 h-4 rounded-full border border-arcadia-gold/30 flex items-center justify-center flex-shrink-0 mt-0.5">
                                                     <Check className="w-2.5 h-2.5 icon-gold" strokeWidth={2.5} />
                                                 </div>
-                                                <span>{b}</span>
+                                                <span><T text={b} /></span>
                                             </li>
                                         ))}
                                     </ul>
@@ -378,7 +377,7 @@ export function EliteAccess() {
                                         />
                                     </div>
                                     <p className="text-center text-[10px] text-white/20 mt-3 font-light tracking-[0.04em]">
-                                        {copyTradingCard.microcopy}
+                                        <T text={copyTradingCard.microcopy} />
                                     </p>
                                 </div>
 
@@ -396,15 +395,14 @@ export function EliteAccess() {
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-12">
                         <h3 className="text-2xl md:text-4xl font-serif text-liquid-silver tracking-tight mb-6">
-                            Membership <span className="text-liquid-gold italic">Private</span>
+                             <T text={"Membership"} /> <span className="text-liquid-gold italic"> <T text={"Private"} /> </span>
                         </h3>
                         <div className="max-w-2xl mx-auto space-y-4 text-white/50 text-[14px] md:text-[15px] leading-relaxed font-light tracking-[0.02em]">
                             <p>
-                                <span className="text-white/80 font-normal">Prima di scegliere un percorso, guarda come lavoro.</span> Nell’archivio pubblico trovi analisi, posizioni e aggiornamenti: parti dai casi documentati e valuta <strong className="text-liquid-gold font-normal italic">le decisioni dietro i numeri.</strong>
+                                <span className="text-white/80 font-normal"> <T text={"Prima di scegliere un percorso, guarda come lavoro."} /> </span>  <T text={"Nell’archivio pubblico trovi analisi, posizioni e aggiornamenti: parti dai casi documentati e valuta"} /> <strong className="text-liquid-gold font-normal italic"> <T text={"le decisioni dietro i numeri."} /> </strong>
                             </p>
                             <p>
-                                <span className="text-white/80 font-normal">ELITE nasce per questo.</span> È l'accesso diretto alla mia operatività. Un ambiente riservato a chi vuole stare dentro al flusso reale del mercato, con riferimenti chiari, senza distrazioni e senza contenuti inutili.
-                            </p>
+                                <span className="text-white/80 font-normal"> <T text={"ELITE nasce per questo."} /> </span>  <T text={"È l'accesso diretto alla mia operatività. Un ambiente riservato a chi vuole stare dentro al flusso reale del mercato, con riferimenti chiari, senza distrazioni e senza contenuti inutili."} /> </p>
                         </div>
                     </div>
 
@@ -421,10 +419,10 @@ export function EliteAccess() {
                     transition={{ delay: 0.5 }}
                     className="text-center text-[10px] text-white/15 mt-16 lg:mt-24 font-light tracking-wide max-w-2xl mx-auto relative z-10"
                 >
-                    Il trading comporta rischio. I risultati passati non garantiscono risultati futuri. Nessuna promessa di profitto.
-                </motion.p>
+                     <T text={"Il trading comporta rischio. I risultati passati non garantiscono risultati futuri. Nessuna promessa di profitto."} /> </motion.p>
             </Container>
         </section>
     );
 }
+
 

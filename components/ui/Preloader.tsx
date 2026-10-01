@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useState } from "react";
+import { T } from "@/components/LanguageProvider";
 
 export default function Preloader() {
     const [isLoading, setIsLoading] = useState(true);
@@ -19,7 +20,7 @@ export default function Preloader() {
         // Hide preloader shortly after animation completes
         const timer = setTimeout(() => {
             setIsLoading(false);
-            window.scrollTo(0, 0);
+            if (!window.location.hash) window.scrollTo(0, 0);
         }, 2400);
 
         return () => {
@@ -81,7 +82,7 @@ export default function Preloader() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.6, duration: 0.8 }}
                         >
-                            DOMINATORI DEL TEMPO
+                            <T text="Dominatori del Tempo" />
                         </motion.span>
                     </motion.div>
 
@@ -125,3 +126,4 @@ export default function Preloader() {
         </AnimatePresence>
     );
 }
+
