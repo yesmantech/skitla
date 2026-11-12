@@ -1,6 +1,8 @@
 
 "use client";
 import { T, useLanguage } from "@/components/LanguageProvider";
+import { GOLD_ACCESS } from "@/content/gold-access";
+import { goldBotLink } from "@/lib/gold-links";
 
 import { motion } from "framer-motion";
 import { Container } from "./ui/Container";
@@ -21,7 +23,7 @@ interface PricingCard {
     badge?: string;
     description: string;
     trustLine?: string;
-    entryLine?: string;
+    entryLines?: readonly string[];
     benefits: string[];
     cta: string;
     microcopy: string;
@@ -37,7 +39,7 @@ const cards: PricingCard[] = [
         "badge": "Copy trading FPG in arrivo",
         "description": "Due approcci al Gold, una community da esplorare. Scopri SKITLA scalping XAU e SKITLA sniper XAU e scegli quali idee seguire secondo il tuo piano.",
         "trustLine": "Le sale pubblicano segnali: oggi le operazioni sono eseguite da te. Il copy trading FPG non è ancora attivo.",
-        "entryLine": "Accesso privato: referral FPG, KYC e almeno 300€ o equivalente USD accreditati sul tuo conto.",
+        "entryLines": [GOLD_ACCESS.summary, GOLD_ACCESS.fpgMemento, GOLD_ACCESS.exness],
         "benefits": [
             "Due sale dedicate al Gold",
             "Ingressi, target e stop nei setup",
@@ -47,7 +49,6 @@ const cards: PricingCard[] = [
             "Gestione del rischio complessivo tra le sale"
         ],
         "cta": "Scopri le sale Gold",
-        "href": "https://t.me/SkitlaSalaSegnaliBot?start=gold",
         "microcopy": "Il deposito è capitale sul tuo conto, non una quota SKITLA. Possibili commissioni di affiliazione. Il trading comporta rischio."
     },
     {
@@ -91,7 +92,7 @@ const cards: PricingCard[] = [
 
 export function EliteAccess() {
     const { language } = useLanguage();
-    const copyTradingCard = cards[0];
+    const copyTradingCard = { ...cards[0], href: goldBotLink("home", language) };
     const membershipCards = cards.slice(1);
 
     const renderCard = (card: PricingCard, i: number) => (
@@ -180,10 +181,10 @@ export function EliteAccess() {
                     )}
 
                     {/* Entry requirement */}
-                    {card.entryLine && (
-                        <p className="text-white/25 text-[12px] leading-relaxed font-light mb-5 tracking-[0.04em]">
-                            <T text={card.entryLine} />
-                        </p>
+                    {card.entryLines && (
+                        <div className="text-white/50 text-[12px] leading-relaxed font-light mb-5 tracking-[0.04em] space-y-2">
+                            {card.entryLines.map(line => <p key={line}><T text={line} /></p>)}
+                        </div>
                     )}
 
                     {/* Divider — gradient style */}
@@ -208,7 +209,7 @@ export function EliteAccess() {
                     <div className="w-full flex justify-center">
                         <HeroCTA
                             label={card.cta}
-                            href={card.href?.includes('?start=gold')?`https://t.me/SkitlaSalaSegnaliBot?start=gold_v1_site_home_${language}`:card.href}
+                            href={card.href}
                             className="w-full max-w-[280px]"
                             interactive={false}
                         />
@@ -258,7 +259,7 @@ export function EliteAccess() {
                         transition={{ delay: 0.3, duration: 1 }}
                         className="text-white/40 text-sm md:text-base font-light leading-relaxed max-w-lg mx-auto mt-5"
                     >
-                         <T text={"Scopri le due sale Gold e le membership SKITLA. Il copy trading FPG è in arrivo."} /> </motion.p>
+                         <T text={"Scopri le due sale Gold, i percorsi con FPG, Exness e Memento e le membership SKITLA."} /> </motion.p>
                 </div>
 
                 {/* ── DESKTOP / TABLET (lg+): Side-by-side ── */}
@@ -345,10 +346,10 @@ export function EliteAccess() {
                                             <T text={copyTradingCard.trustLine} />
                                         </p>
                                     )}
-                                    {copyTradingCard.entryLine && (
-                                        <p className="text-white/25 text-[12px] leading-relaxed font-light tracking-[0.04em]">
-                                            <T text={copyTradingCard.entryLine} />
-                                        </p>
+                                    {copyTradingCard.entryLines && (
+                                        <div className="text-white/50 text-[12px] leading-relaxed font-light mt-2 tracking-[0.04em] space-y-2">
+                                            {copyTradingCard.entryLines.map(line => <p key={line}><T text={line} /></p>)}
+                                        </div>
                                     )}
                                 </div>
 
