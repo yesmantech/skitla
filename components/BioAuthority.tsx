@@ -156,7 +156,7 @@ export function BioAuthority() {
                                          <T text={"Perché Fidarsi"} /> </h3>
                                     <ul className="space-y-4">
                                         {[
-                                            "Partnership: FPG, Exness, Bitunix, BingX e Bitget.",
+                                            "Partnership: FPG, Exness, Memento, Bitunix, BingX e Bitget.",
                                             "Analisi su oro e Bitcoin, con approfondimenti pubblicati.",
                                             "Caso studio firmato su Lo Jonio: da circa $5k a un picco di equity oltre $300k.",
                                             "Tracciabilità (Ecosistema + pubblicazioni)."

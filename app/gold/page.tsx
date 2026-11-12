@@ -3,6 +3,8 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FAQ } from "@/components/FAQ";
 import { T, useLanguage } from "@/components/LanguageProvider";
+import { GOLD_ACCESS } from "@/content/gold-access";
+import { goldBotLink } from "@/lib/gold-links";
 
 export default function GoldPage() {
   const { language } = useLanguage();
@@ -18,12 +20,22 @@ export default function GoldPage() {
         {[['SKITLA scalping XAU','Idee sul Gold con ingressi, target, stop e aggiornamenti operativi.'],['SKITLA sniper XAU','Un secondo approccio al Gold da seguire secondo il tuo piano di trading.']].map(([title,body])=><article key={title} className="rounded-2xl border border-arcadia-gold/30 p-7 bg-white/[0.03]"><h2 className="text-2xl font-serif text-arcadia-gold mb-4">{title}</h2><p className="text-white/75 leading-relaxed"><T text={body}/></p></article>)}
       </div>
       <section className="border-t border-white/15 py-10">
+        <h2 className="font-serif text-3xl mb-5"><T text="Il tuo percorso verso le sale Gold"/></h2>
+        <p className="text-white/75 leading-relaxed mb-6"><T text={GOLD_ACCESS.summary}/></p>
+        <div className="grid md:grid-cols-2 gap-5">
+          {[['FPG · Memento', GOLD_ACCESS.fpgMemento], ['Exness', GOLD_ACCESS.exness]].map(([broker, requirements]) => <article key={broker} className="rounded-2xl border border-arcadia-gold/30 p-6 bg-white/[0.03]"><h3 className="text-xl text-arcadia-gold mb-3" dir="ltr">{broker}</h3><p className="text-white/75 leading-relaxed"><T text={requirements}/></p></article>)}
+        </div>
+        <p className="text-white/65 leading-relaxed mt-6"><T text={GOLD_ACCESS.existing}/></p>
+        <p className="text-sm text-white/60 leading-relaxed mt-4"><T text={GOLD_ACCESS.deposit}/></p>
+        <a href={goldBotLink("home", language)} className="inline-block mt-6 rounded-xl bg-arcadia-gold text-black font-semibold px-6 py-4"><T text="Apri il percorso Gold nel bot"/> →</a>
+      </section>
+      <section className="border-t border-white/15 py-10">
         <p className="text-sm text-arcadia-gold"><T text="Scalping · 30 settembre 2026"/></p>
         <h2 className="font-serif text-3xl my-4"><T text="Una giornata da approfondire"/></h2>
         <p className="text-2xl"><T text="12 idee operative · 3 stop"/></p>
         <p dir="ltr" className="my-3">TP1: 9 · TP2: 8 · TP3: 2 · TP4: 2</p>
         <p className="text-white/65 max-w-2xl leading-relaxed"><T text="I target parziali si riferiscono alle stesse idee, non a operazioni aggiuntive. Fonte: riepilogo giornaliero della sala Scalping."/></p>
-        <a href={`https://t.me/SkitlaSalaSegnaliBot?start=gold_v1_site_reports_${language}`} className="inline-block mt-5 text-arcadia-gold underline underline-offset-4"><T text="Leggi i report Gold originali"/> →</a>
+        <a href={goldBotLink("reports", language)} className="inline-block mt-5 text-arcadia-gold underline underline-offset-4"><T text="Leggi i report Gold originali"/> →</a>
       </section>
       <section className="border-t border-white/15 py-10">
         <h2 className="font-serif text-3xl mb-5"><T text="Inizia con MT5"/></h2>

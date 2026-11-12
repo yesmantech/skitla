@@ -1,3 +1,5 @@
+import { GOLD_ACCESS } from "./gold-access";
+
 export const FAQS = [
     {
         "question": "Quali sale Gold sono disponibili?",
@@ -5,11 +7,23 @@ export const FAQS = [
     },
     {
         "question": "Come richiedo l’accesso alle sale Gold?",
-        "answer": "Avvia @SkitlaSalaSegnaliBot su Telegram. Il percorso richiede registrazione tramite referral FPG, KYC e almeno 300 euro o equivalente USD effettivamente accreditati sul tuo conto. L’amministratore verifica i requisiti prima di fornire le istruzioni di accesso."
+        "answer": GOLD_ACCESS.request
+    },
+    {
+        "question": "Quali sono i requisiti per accedere alle sale Gold con FPG o Memento?",
+        "answer": GOLD_ACCESS.fpgMemento
+    },
+    {
+        "question": "Quali sono i requisiti per accedere alle sale Gold con Exness?",
+        "answer": GOLD_ACCESS.exness
+    },
+    {
+        "question": "Ho già un conto: come procedo?",
+        "answer": GOLD_ACCESS.existing
     },
     {
         "question": "Il deposito è una quota da versare a SKITLA?",
-        "answer": "No. Il deposito è capitale sul tuo conto FPG ed è esposto al rischio di trading. Non viene versato agli amministratori Telegram. SKITLA può ricevere commissioni di affiliazione dal broker."
+        "answer": GOLD_ACCESS.deposit
     },
     {
         "question": "Il copy trading FPG è già disponibile?",
@@ -17,7 +31,7 @@ export const FAQS = [
     },
     {
         "question": "Come funzionano le membership?",
-        "answer": "Sono disponibili percorsi Premium mensili e annuali, distinti dall’accesso Gold tramite FPG. Contatta @SKITLAService per contenuti, disponibilità, costo e condizioni del piano prima dell’adesione."
+        "answer": GOLD_ACCESS.membership
     },
     {
         "question": "Garantite profitti?",
