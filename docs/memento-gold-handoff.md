@@ -1,8 +1,10 @@
 # Memento / Gold integration handoff
 
-Status: preparation branch, not deployed. The Telegram bot source was not available
-for this change. Website changes must ship with the completed bot flow, after the
-real Memento registration link and referral code have been configured and checked.
+Status: preparation branch, not deployed. The website changes and the corresponding
+Telegram bot integration are prepared. Bot implementation and offline validation
+are held in a separate private working copy; the running bot has not been updated.
+Memento remains disabled pending confirmation of the exact referral code. Release
+the website and bot together after the remaining checks below are complete.
 
 ## Website changes in this branch
 
@@ -13,68 +15,81 @@ real Memento registration link and referral code have been configured and checke
   homepage, Gold page and FAQ. Memento is included alongside FPG and Exness.
 - The Gold page links directly to the existing home/menu payload for access and
   retains the separate reports payload. The access link does not introduce a new
-  source token that the current bot might not understand. If the bot records
-  `site_home` as page attribution, access from `/gold` will share that value;
-  inspect the bot parser before introducing a distinct page-attribution token.
+  source token. The bot parser has been checked: `gold_v1_site_*` entrances map to
+  the existing `site_oct01` website-source bucket. The homepage and `/gold` retain
+  this coarse website attribution; this branch does not add per-page attribution.
 - New and changed copy is translated in all five current website languages:
   Italian, English, Arabic, Simplified Chinese and Russian.
 - FPG copy trading remains a separate, not-yet-active service. This change does
   not advertise copy trading for Exness or Memento.
 
-## Bot work still required
+## Bot integration prepared
 
-`docs/memento-bot-copy.json` is a nine-language integration draft, not a runtime
-configuration. Its text must be mapped to the actual bot's keys and flow after
-the source is available. Its presence in this website repository does not enable
-Memento or change the running Telegram bot.
+The actual bot source has been inspected and the integration implemented in the
+separate private working copy. The prepared implementation includes:
 
-1. Add a distinct Memento provider in the Gold menu and throughout the new-account
-   and existing-account flows. Reuse the current navigation patterns rather than
-   creating a separate flow that drops the selected provider or language.
-2. Configure the exact client registration URL and the separate referral code.
-   Preserve all URL parameters. Show the code in a copyable format and explain
-   where it is used if the broker's actual registration form requires it.
-   Do not derive a manual code from a tracking token or substitute an IB signup URL.
-3. Keep the provider disabled until both registration data items are configured
-   and the link destination is verified. Never expose a blank, guessed or example
-   registration URL to users. Avoid creating an access request from an incomplete
-   provider configuration.
-4. Apply the owner-approved Gold access conditions: for FPG and Memento, an account
-   in the client's name linked to Skitla13's referral, completed identity
-   verification, and a credited deposit of at least EUR 300 or the USD equivalent.
-   These are SKITLA Gold access criteria, not a statement of the broker's general
-   account-opening minima. For Exness, preserve the existing residence/profile
-   eligibility text and the statement that SKITLA imposes no deposit threshold;
-   the broker's own requirements still apply.
-5. Preserve the provider on the request reference, saved request state, prefilled
-   Service message, resume/refresh screens, reminders and admin review. A provider
-   selection must not silently reassign an existing pending request to another broker.
-6. Add the existing-Memento-account branch. Ask the user to contact the Service to
-   verify referral affiliation before opening another account; do not promise
-   automatic affiliate transfer or automatic room access.
-7. Review presentation and transactional copy in all nine current bot languages:
-   Italian, English, Spanish, Portuguese, French, German, Arabic, Simplified Chinese
-   and Russian. Keep language selection on every return/resume path. Match the
-   translated existing-account button labels with the website instructions.
-8. Update the bot description, consent/data/reminder information and admin labels
-   where they enumerate brokers. Keep the current FPG collaboration programme
-   separate unless the owner confirms an equivalent Memento partnership workflow.
+- A distinct Memento provider in the Gold menu, dedicated conditions, new-account
+  registration and existing-account paths, Service handoff and admin review.
+- Configuration checks that keep Memento entry points disabled and omit Memento
+  from public broker lists until it is enabled with a valid registration URL and code.
+  Incomplete configuration cannot create a misleading signup path or access request.
+- The owner-approved Gold access conditions: for FPG and Memento, an account in
+  the client's name linked to Skitla13's referral, completed identity verification,
+  and a credited deposit of at least EUR 300 or the USD equivalent. These are
+  SKITLA Gold access criteria, not the broker's general account-opening minima.
+  Exness retains its residence/profile eligibility text and the statement that
+  SKITLA imposes no deposit threshold; the broker's own requirements still apply.
+- Provider, language and request-reference continuity through saved requests,
+  prefilled Service messages, resume/refresh screens, reminders and admin review.
+  Selecting another provider does not silently reassign an existing pending request.
+- An existing-Memento-account path that asks the client to contact the Service
+  before opening another account. Any affiliation change depends on the broker's
+  rules; neither affiliate transfer nor room access is promised automatically.
+- Presentation and transactional copy in all nine bot languages: Italian, English,
+  Spanish, Portuguese, French, German, Arabic, Simplified Chinese and Russian.
+  French retains the existing formal register and Portuguese uses consistent
+  European Portuguese. Home/menu labels share the canonical Gold translations.
+- Broker-aware public descriptions and admin labels, while retaining existing
+  consent/data/reminder handling and the separate FPG collaboration programme.
 
-## Targeted validation before release
+`docs/memento-bot-copy.json` remains a nine-language reference draft. The actual
+implementation maps the reviewed content to the bot's runtime modules. This JSON
+is not runtime configuration, does not enable Memento and does not update the
+running Telegram bot merely by being present in the website repository.
 
-- Use isolated fixtures/test storage: do not test by creating customer requests.
-- Exercise new and existing accounts for each of the three providers, all
-  language selections, back/menu navigation and the two existing website payloads.
-- Confirm registration URL and code display, request/provider/language persistence,
-  Service text, reminders/opt-out and admin approval/rejection/cancellation.
-- Confirm incomplete Memento configuration cannot create a misleading signup path.
-- Recheck FPG and Exness URLs and requests unchanged, including pending requests
-  created before the update. Exness must not inherit the FPG/Memento deposit rule.
-- Do a final user-visible review at desktop and mobile sizes before deploying the
-  coordinated website and bot release.
+## Registration link and referral verification
 
-No broker registration, referral attribution or bot deployment is verified by the
-website-only checks in this branch.
+- The supplied HTTP signup link was checked and redirects to the exact HTTPS
+  destination:
+  [https://live.memento-markets.com/signup/YxBrnq6E](https://live.memento-markets.com/signup/YxBrnq6E).
+  This is the client signup destination, not an IB signup page.
+- No separate referral-code field was visible in the inspected registration form.
+  Prepared instructions therefore say to check or enter the code only if such a
+  field is present. They do not assume that the form requires manual code entry.
+- The supplied code has an ambiguous trailing backslash. Confirmation of the exact
+  code is still required; no code value is published in this handoff. A manual code
+  must not be derived from the signup URL token.
+- The destination check did not verify affiliate attribution. No completed broker
+  registration or referral-credit confirmation is claimed.
+- The provider remains disabled until the exact code is confirmed and configured.
+
+## Bot checks completed offline
+
+- All 25 Gold smoke suites passed, together with the MFA and admin-navigation
+  suites: 27 suites in total. Syntax checks also passed.
+- Coverage includes all nine bot languages, 27 localized registration journeys,
+  818 simulated clicks and 106 callbacks, provider/request/language persistence,
+  existing-account handling, Service messages, reminders and administrative flows.
+- Incomplete-configuration checks, FPG/Exness regression checks and reconciliation
+  of the public profile through a simulated API passed.
+- An independent implementation review passed.
+
+The same 27 suites and syntax checks also passed in the separate Windows staging
+copy on Node 24.18.0, after passing in the development environment on Node 24.22.1.
+All 26 changed/new files match between the two copies by SHA-256; the 118 original
+Windows source files remain unchanged. These results validate the prepared code
+with offline simulations. They do not establish that the running Telegram bot
+has been updated or that live referral attribution works.
 
 ## Website checks completed
 
@@ -89,7 +104,22 @@ website-only checks in this branch.
   were not changed.
 - `git diff --check`: passed.
 
-The pending visual and end-to-end bot checks above remain release requirements.
-The production preview started successfully on the local loopback interface, but
-the separate browser environment could not reach it (`ERR_CONNECTION_REFUSED`).
-No browser-based visual QA is claimed for this branch.
+## Release work remaining
+
+1. Confirm the exact referral code, retaining every intended character. Configure
+   it separately from the verified registration URL and review the resulting
+   copyable code and conditional form instructions before enabling the provider.
+2. Complete desktop/mobile visual QA for the website through an authenticated
+   preview or an environment that permits the browser to launch. Vercel reports
+   a successful preview deployment, but its URL redirects to Vercel sign-in.
+   A local Next.js preview also started successfully; the separate cloud browser
+   could not reach loopback, and local Chromium aborted before rendering a page
+   because the runtime denied its socket/ptrace operations. No protection settings
+   were changed and no completed screenshot-based visual QA is claimed.
+3. Deploy the coordinated bot and website release, then perform the live
+   end-to-end checks with a controlled test account: website entry links, locale
+   selection, all three broker paths, existing-account handoff, navigation, request
+   state, reminders and admin handling. Do not use customer requests as test data.
+4. Verify referral attribution through an appropriate broker confirmation before
+   treating the signup token or code as proven affiliate credit. Destination
+   resolution and offline bot tests do not provide that confirmation.
