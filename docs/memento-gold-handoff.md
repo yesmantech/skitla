@@ -4,9 +4,16 @@ Status: the Telegram bot integration was deployed on 12 November 2026 to the
 verified LOCAL_PRIMARY Windows runtime. Memento is enabled with the exact
 owner-confirmed referral code. The existing supervisor reloaded its single bot
 process; fresh POLLING_OK and successful public-profile reconciliation were
-verified. The website branch is ready for the corresponding production release.
+verified. Live Telegram review covered the Italian new-account and existing-account
+screens and the English existing-account screen; the request count remained eight.
 
-## Website changes in this branch
+Website status: **ASURA_PENDING**. PR #2 has been merged into `main` at `e9f3764`.
+Vercel production deployment `CDBc6Kfu2DFZX2UwgN89D9bBfq6k` succeeded, but the
+actual custom domain is served by Asura Hosting at `23.153.104.17` using LiteSpeed.
+The Asura site has not been updated. A Vercel deployment does not publish files to
+this hosting account.
+
+## Website changes merged
 
 - The homepage Gold card uses the same language-aware bot entry URL on desktop and mobile.
 - `lib/gold-links.ts` centralizes the existing `gold_v1_site_home_<language>` and
@@ -109,21 +116,78 @@ These checks do not establish broker-side referral attribution.
   for Google Fonts TLS trust in the build environment; repository TLS settings
   were not changed.
 - `git diff --check`: passed.
+- Static export with
+  `SKITLA_STATIC_EXPORT=1 NEXT_TURBOPACK_EXPERIMENTAL_USE_SYSTEM_TLS_CERTS=1 npm run build`:
+  passed, including all 13 generated pages. The local `out/` staging output contains
+  171 files, totalling 29,374,105 bytes. This build did not upload or publish files.
 
-## Website release and final observation
+## Asura release boundary
 
-1. Complete desktop/mobile visual QA through the public production site after
-   the coordinated website release, or through an authenticated
-   preview or an environment that permits the browser to launch. Vercel reports
-   a successful preview deployment, but its URL redirects to Vercel sign-in.
-   A local Next.js preview also started successfully; the separate cloud browser
-   could not reach loopback, and local Chromium aborted before rendering a page
-   because the runtime denied its socket/ptrace operations. No protection settings
-   were changed and no completed screenshot-based visual QA is claimed.
-2. Merge the website change through the existing GitHub/Vercel integration and
-   verify the resulting production deployment. Inspect live bot navigation and
-   the Memento conditions without submitting new customer requests. Transactional
-   request, reminder and admin paths have been verified with isolated fixtures.
-3. Verify referral attribution through an appropriate broker confirmation before
+- Historical deployment notes in the private bot project
+  (`docs/gold-journey-20261001.md`) describe extracting a ZIP into `/public_html`
+  on the hosting account. This is a separate deployment path from GitHub/Vercel.
+- The public `/gold/` is a custom nine-language page. The Next export produces a
+  different five-language `/gold/`; it must not overwrite the custom page.
+- The authoritative custom Gold source/generator has not been recovered. Keep
+  the complete Next export as staging material only. No replacement nine-language
+  page has been invented, and no website deployment package has been prepared.
+- The hosting panel at `clients.asurahosting.com/login` remained on Cloudflare
+  verification. Attempts were stopped and reported as `sign_in_blocked`. No
+  protection settings or DNS records were changed, and no Asura upload occurred.
+
+## Proposed static overlay scope — not a release package
+
+The homepage, partnership text and FAQ are sections of the same root route. Source
+inspection confirms that links to `/gold/` in the navigation, sidebar, footer and
+newsletter use ordinary anchors, preserving a full navigation to the separately
+hosted custom page. Copying only `index.html` would omit the new JavaScript and
+translation content; the associated assets and root route payloads are required.
+
+| Scope | Proposed handling |
+| --- | --- |
+| `index.html`, `index.txt`, `__next._tree.txt`, `__next._index.txt`, `__next._head.txt`, `__next._full.txt`, `__next.__PAGE__.txt` | Keep the seven root route files together from the same build. |
+| `_next/**` | Add the matching 47 generated files while retaining older remote assets needed by existing pages or cached sessions. Do not replace the directory wholesale. |
+| `gold/**` and `gold-start.html` | Exclude from a homepage-only overlay. Preserve the current custom Gold page, its payloads/resources and redirect until its authoritative source or a reviewed patch is available. |
+| `.htaccess` and hosting-owned files | Preserve unchanged. Do not replace the document root, remove remote files or alter routing rules. |
+| Existing images, feedback files, models and other public assets | Preserve. Add a required file only after confirming it is missing; do not overwrite an unrelated or customized remote resource. |
+| Newsletter, report, concepts and error pages | Outside the minimum homepage/partnership/FAQ scope; do not replace them without a separate comparison. |
+
+The candidate homepage core is 54 files, totalling 6,228,013 bytes. It assumes that
+the existing public images, model and other stable assets remain available at
+their current paths. That assumption and the remote routing/cache behaviour have
+not been verified through the hosting account. The report page also uses a Next
+client link back to `/`; a mixed-build route transition needs review before a
+homepage-only release is treated as complete.
+
+Uploading the entire export except `gold/**` would contain 163 files and would
+also replace unrelated pages and public assets. It is therefore broader than the
+requested minimum and is not a safe deployment shortcut. A non-deleting file overlay
+can preserve paths absent from the upload, but it still replaces every included
+path; excluding Gold alone does not protect other customized remote files.
+
+Once the custom Gold source is recovered, update that authoritative nine-language
+output with the reviewed Memento flow, then overlay only its owned files into a
+separate staging copy. Do not use the Next five-language Gold HTML or route
+payloads as a substitute. Review the complete proposed file list against a remote
+backup before publishing. No package or standalone manifest has been generated
+from this proposed scope.
+
+## Website release and final observation still required
+
+1. Restore a working sign-in to the Asura hosting account and recover the
+   authoritative custom Gold files/source. Retain the current nine-language page
+   until its Memento update is prepared and reviewed. Do not change DNS to make a
+   Vercel build appear to be an Asura deployment.
+2. Prepare and review a bounded, non-deleting upload against the actual hosting
+   files, preserving `/gold/`, `.htaccess` and remote resources as described above.
+   Upload matching assets before the pages that reference them; retain the prior
+   files for rollback. The current export is not ready for a wholesale upload.
+3. Complete desktop/mobile visual QA and live website-to-bot navigation checks
+   after the hosting update. Earlier local preview attempts were blocked by
+   loopback isolation or denied Chromium socket/ptrace operations. No protection
+   settings were changed and no completed screenshot-based website QA is claimed.
+   Live Telegram screens have been inspected without creating customer requests;
+   transactional request, reminder and admin paths were tested with isolated fixtures.
+4. Verify referral attribution through an appropriate broker confirmation before
    treating the signup token or code as proven affiliate credit. Destination
    resolution and offline bot tests do not provide that confirmation.
