@@ -1,10 +1,10 @@
 # Memento / Gold integration handoff
 
-Status: preparation branch, not deployed. The website changes and the corresponding
-Telegram bot integration are prepared. Bot implementation and offline validation
-are held in a separate private working copy; the running bot has not been updated.
-Memento remains disabled pending confirmation of the exact referral code. Release
-the website and bot together after the remaining checks below are complete.
+Status: the Telegram bot integration was deployed on 12 November 2026 to the
+verified LOCAL_PRIMARY Windows runtime. Memento is enabled with the exact
+owner-confirmed referral code. The existing supervisor reloaded its single bot
+process; fresh POLLING_OK and successful public-profile reconciliation were
+verified. The website branch is ready for the corresponding production release.
 
 ## Website changes in this branch
 
@@ -23,10 +23,10 @@ the website and bot together after the remaining checks below are complete.
 - FPG copy trading remains a separate, not-yet-active service. This change does
   not advertise copy trading for Exness or Memento.
 
-## Bot integration prepared
+## Bot integration deployed
 
-The actual bot source has been inspected and the integration implemented in the
-separate private working copy. The prepared implementation includes:
+The actual bot source was inspected, implemented and tested in a separate private
+working copy, then applied with a source backup. The implementation includes:
 
 - A distinct Memento provider in the Gold menu, dedicated conditions, new-account
   registration and existing-account paths, Service handoff and admin review.
@@ -66,12 +66,11 @@ running Telegram bot merely by being present in the website repository.
 - No separate referral-code field was visible in the inspected registration form.
   Prepared instructions therefore say to check or enter the code only if such a
   field is present. They do not assume that the form requires manual code entry.
-- The supplied code has an ambiguous trailing backslash. Confirmation of the exact
-  code is still required; no code value is published in this handoff. A manual code
-  must not be derived from the signup URL token.
+- The owner confirmed the exact code without the trailing backslash. It is
+  configured separately from the signup token in the private bot configuration.
 - The destination check did not verify affiliate attribution. No completed broker
   registration or referral-credit confirmation is claimed.
-- The provider remains disabled until the exact code is confirmed and configured.
+- The provider is enabled. Missing or invalid configuration still fails closed.
 
 ## Bot checks completed offline
 
@@ -86,10 +85,17 @@ running Telegram bot merely by being present in the website repository.
 
 The same 27 suites and syntax checks also passed in the separate Windows staging
 copy on Node 24.18.0, after passing in the development environment on Node 24.22.1.
-All 26 changed/new files match between the two copies by SHA-256; the 118 original
-Windows source files remain unchanged. These results validate the prepared code
-with offline simulations. They do not establish that the running Telegram bot
-has been updated or that live referral attribution works.
+The 25 Gold suites also passed with the final enabled configuration in both
+environments. Two test fixtures were made explicit about legacy/disabled mode so
+they no longer inherit the deployment default. The actual link and code were
+rendered in all nine languages with isolated data and no network calls.
+
+All 27 changed/new files were verified by SHA-256 before and after deployment.
+The original runtime files were backed up; no database migration or database
+restore was performed. The active local supervisor and one fresh POLLING_OK
+process were verified. The historical Railway-only lock is superseded by the
+existing LOCAL_PRIMARY launcher; no cloud deployment or second poller was started.
+These checks do not establish broker-side referral attribution.
 
 ## Website checks completed
 
@@ -104,22 +110,20 @@ has been updated or that live referral attribution works.
   were not changed.
 - `git diff --check`: passed.
 
-## Release work remaining
+## Website release and final observation
 
-1. Confirm the exact referral code, retaining every intended character. Configure
-   it separately from the verified registration URL and review the resulting
-   copyable code and conditional form instructions before enabling the provider.
-2. Complete desktop/mobile visual QA for the website through an authenticated
+1. Complete desktop/mobile visual QA through the public production site after
+   the coordinated website release, or through an authenticated
    preview or an environment that permits the browser to launch. Vercel reports
    a successful preview deployment, but its URL redirects to Vercel sign-in.
    A local Next.js preview also started successfully; the separate cloud browser
    could not reach loopback, and local Chromium aborted before rendering a page
    because the runtime denied its socket/ptrace operations. No protection settings
    were changed and no completed screenshot-based visual QA is claimed.
-3. Deploy the coordinated bot and website release, then perform the live
-   end-to-end checks with a controlled test account: website entry links, locale
-   selection, all three broker paths, existing-account handoff, navigation, request
-   state, reminders and admin handling. Do not use customer requests as test data.
-4. Verify referral attribution through an appropriate broker confirmation before
+2. Merge the website change through the existing GitHub/Vercel integration and
+   verify the resulting production deployment. Inspect live bot navigation and
+   the Memento conditions without submitting new customer requests. Transactional
+   request, reminder and admin paths have been verified with isolated fixtures.
+3. Verify referral attribution through an appropriate broker confirmation before
    treating the signup token or code as proven affiliate credit. Destination
    resolution and offline bot tests do not provide that confirmation.
